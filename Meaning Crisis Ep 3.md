@@ -1,3 +1,4 @@
+## Continuous Cosmos and Modern World Grammar
 
 Before the Axial age humans had the world view of continuous cosmos where
 everything was essentially connected. And you could have things like actually

@@ -10,7 +10,7 @@ around the topic of the current meaning crisis that is going on in our society.
 - [Meaning Crisis Ep 5](Meaning Crisis Ep 5)
 - [Meaning Crisis Ep 6](Meaning Crisis Ep 6)
 - [Meaning Crisis Ep 7](Meaning Crisis Ep 7)
-
+- [Meaning Crisis Ep 8](Meaning Crisis Ep 8)
 
 
 

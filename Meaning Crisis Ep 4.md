@@ -1,4 +1,4 @@
-
+## Socrates and the Quest for Wisdom
  
 Through Socrates and the Axial revolution gods become moral exemplar so that
 they represent that which we has humans should reach for.

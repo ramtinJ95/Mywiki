@@ -1,3 +1,4 @@
+## Plato and the cave
 
 Platos main contribution or lets say main idea is that there are three
 competing modes in your minds or within our bodies that are there. The first

@@ -1,3 +1,4 @@
+## Aristotle's world view and Erich Fromm
 
 The core idea of being rational is not to simply be logical. But rather it is
 your capacity for detecting and correcting self-deception and also your ability

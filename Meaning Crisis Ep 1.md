@@ -1,3 +1,4 @@
+## Introduction
 
 In the introduction John says that thanks to some kind of near extinction event
 happening 70k years ago humans adapted to this through a social technology

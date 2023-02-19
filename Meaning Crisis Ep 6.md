@@ -1,4 +1,4 @@
-
+## Aristotle, Kant, and Evolution.
 
 Aristotle was Plato's disciple, his main contribution or development of Plato's
 ideas is change. Plato did not really touch on the subject of change.
