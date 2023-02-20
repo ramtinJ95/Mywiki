@@ -56,3 +56,9 @@ tags:
 
 ## Lists [[Business Ideas]] [[Books I have read]] [[Book to read]]
 
+##### Keeping a Diary in Vim
+useful commands for using the vimwiki diary functionallity:
+
+- <leader>w<leader>w " create new diary note for the day
+- <leader>wi " show all diary entries
+- <leader>w<leader>i " update entries
