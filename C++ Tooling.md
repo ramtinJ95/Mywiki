@@ -12,3 +12,8 @@ few steps had to be taken.
 3) Run "make clean" then "bear -- make" and the json file will be generated. But
    note that the "-I" flag in step 2 has to be in the makefile compile command
    before doing step 3.
+
+---
+Status: :🌱:
+tags: [[030 Software Development.md]] - [[C++ Notes.md]]
+date: Tue 21 Feb 2023 17:20:51 CET

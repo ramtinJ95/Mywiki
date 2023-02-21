@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "The definitive guide to kafka.md",
+                "file": "Meaning Crisis Ep 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "The definitive guide to kafka.md",
+                "file": "Meaning Crisis Ep 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "The definitive guide to kafka.md",
+                "file": "Meaning Crisis Ep 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "The definitive guide to kafka.md"
+                "file": "Meaning Crisis Ep 1.md"
               }
             }
           }
@@ -148,15 +148,15 @@
   },
   "active": "357a75bcdf0950a6",
   "lastOpenFiles": [
+    "index.md",
+    "Game Engine notes.md",
+    "The definitive guide to kafka.md",
     "Using Spaced Revision Systems.md",
     "Data mesh.md",
     "Data.md",
     "Book notes.md",
     "Anki.md",
     "080 Psychology and philosophy.md",
-    "010 Productivity.md",
-    "Meaning Crisis Ep 7.md",
-    "Meaning Crisis Ep 4.md",
-    "Meaning Crisis Ep 3.md"
+    "010 Productivity.md"
   ]
 }

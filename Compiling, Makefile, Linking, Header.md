@@ -35,5 +35,9 @@ not the only thing that happens. There are three major steps:
   the functions in the header files. This means that if one has linker errors
   then in the compile command, or in the make file, one has to tell the linker
   which package/implemention to go and link to.
-  
 
+
+---
+Status: :🌳:
+[tags](tags): [[C++ Notes.md]]
+date: Tue 21 Feb 2023 17:11:55 CET
