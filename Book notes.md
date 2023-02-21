@@ -8,3 +8,7 @@ of the notes will be more review style, but not all.
 ## Book Notes
 - [Data mesh](Data mesh)
 - [The definitive guide to kafka](The definitive guide to kafka)
+
+---
+tags: [[001 Book Index.md]]
+

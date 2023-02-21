@@ -166,5 +166,5 @@
 
 ---
 status: :📖:
-tags: [[Book notes]]
+tags: [[Book notes]] - [[030 Software Development.md]] - [[001 Book Index.md]]
 date: 2023-02-03
