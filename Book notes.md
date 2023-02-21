@@ -9,6 +9,11 @@ of the notes will be more review style, but not all.
 - [Data mesh](Data mesh)
 - [The definitive guide to kafka](The definitive guide to kafka)
 
+## Books read in 2023
+- Data mesh
+- The definitive guide to kafka
+- Modern Software Engineering
+
 ---
 tags: [[001 Book Index.md]]
 
