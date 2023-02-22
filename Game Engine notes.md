@@ -91,10 +91,106 @@ and components will inherit some virtual (c++ version of abstract) methods that
 need to be overriden and implemnted, but notice that it will be at most 1 level
 of inheritence. 
 
+#### Example of Component-Based Design
+
+  class Entity {
+  vector<Component*> components;
+  void AddComponent<T>(component);
+  void Update(deltaTime);
+  void Render();
+  }
+Entity has a 1 to many relationship to the Component class:
+
+  class Component {
+    Entity* owner;
+  
+    virtual Update();
+    virtual Render();
+  }
+
+Then the following component classes inherit from our component class:
+
+  class TranformComponent: public Component {
+    glm::vec2 postion;
+    glm::bec2 scale;
+    double rotation;
+  
+    Update() override {
+    }
+  
+    Render override {
+    }
+  }
+
+And then finally we have the entity manager class or registry, and there is only
+one instance of this class:
+
+  class Registry {
+    vector<Entity*> entities;
+    
+    void AddEntity(entity);
+    void RemoveEntity(entity);
+    void Update(deltatime);
+    void Render();
+  }
+
 ## Entity-Component-System
 As mentioned previously, ECS is what modern game engines use nowdays. This ECS
 pattern is a modification of the Component-Based Design that I mentioned
-earlier. 
+earlier. The modifications are as follows, pay attention to how much simpler
+this pattern is compared to the Component-Based Design above.
+
+- Entities
+  - Simply an ID
+  - They will represent the objects that populate the game sceen. 
+- Components
+  - Components are pure data so in our case with c++ they will be structs
+  - They are organized by the data itself rathar than by entity
+    - This organization is the key difference between object oriented and data
+      oriented design
+- Systems
+  - Systems are the logic (code) that transforms components from one state to
+    the next state
+  - For example a MovementSystem might update the position of moving entities by
+    their velocity since the previous frame.
+
+One of the major benefits of having all the components like this is that we can
+keep them all in continous block of memory and close to each other in memory.
+This means that we can make much better use of the cache compared to the
+Component-Based system above which would have us have pointers to a bunch of
+objects all over the place in memory. 
+
+#### Example of ECS
+
+  class Entity {
+    int id;
+  }
+
+
+  struct TransformComponent {
+    glm::vec2 postion;
+    gl::vec2 scale;
+    double rotation;
+  }
+
+
+  class MovementSystem {
+    public:
+      MovementSystem() {
+        RequireComponent<TranformComponent>();
+      }
+      
+      void Update(double deltaTime) {
+        for (auto entity: GetEntities()){
+          TransformComponent& transform =
+          entity.GetComponent<TransformComponent>
+          
+          transform.position.x += rigidbody.velocity.x * deltatime;
+
+Here we can see that each system is only going to interact with a subset of the
+entities in our scene depending on the components that they have, this adds yet
+another performance gain since we could in theory split the work up in threads
+and so on
 
 
 ---
