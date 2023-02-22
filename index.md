@@ -50,10 +50,6 @@ tags:
 	  had during the day and these have to be fleshed out or thrown away at
 	  the end of the day.
 	
-
-
-## Areas of Focus [[Javascript MOC]] [[050 Machine Learning]]
-
 ## Lists [[Business Ideas]] [[Books I have read]] [[Book to read]]
 
 ##### Keeping a Diary in Vim
