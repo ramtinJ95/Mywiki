@@ -59,6 +59,44 @@ if I see that it is needed.
 
 For diving deeper check this link https://gafferongames.com/post/fix_your_timestep/
 
+
+## Component-Based Design
+It may seem like an obvious idea to use a straight up object orienteded
+inheritence style for our game engine where we have some proto class that
+everyone inherits from and so on. But as I have learned that multiple levels of
+inheritence is not ideal, I will go with a Component-Based Design instead. More
+specifically it will be what other game engines such as Unity use, which is
+called a ECS approch (Entity-Component-System). 
+
+Every object in the game will be called an Entity. Each entity can have any
+number of components. So one component could be the tranform-component,
+collider-component and so on. Then the Enemy entity will have these components
+plugged into it, and this is how we will modify its behaviour. Then we will have
+one class which is called the Entity manager which we will use to keep track of
+all the entities in the scene. Each component then takes care of its own
+behaviour as well and has its own render and update functions. This means that
+each entity has a list of components, and it goes and tells all its own
+components to run their own render and update methods before it runs its own
+render and update methods.
+
+  Entity Manager has a list of entities --> Each entity in this list have their
+  own list of each component and their own update and render methods --> Each
+  component have their own behaviour, render and update methods.
+
+This is the high level overview/explanation of the Component-System desgin pattern. 
+
+We will still have some level of inhertience though, so for example we will have
+an abstract class for Entity and Component, and all implementations of entities
+and components will inherit some virtual (c++ version of abstract) methods that
+need to be overriden and implemnted, but notice that it will be at most 1 level
+of inheritence. 
+
+## Entity-Component-System
+As mentioned previously, ECS is what modern game engines use nowdays. This ECS
+pattern is a modification of the Component-Based Design that I mentioned
+earlier. 
+
+
 ---
 Status: :🌱:
 tags: [[030 Software Development.md]]
