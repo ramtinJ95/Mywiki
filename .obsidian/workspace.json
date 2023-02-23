@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meaning Crisis Ep 1.md",
+                "file": "Game Engine notes.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a61d18a86afdb585",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Erase-Remove Idiom.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meaning Crisis Ep 1.md",
+                "file": "Erase-Remove Idiom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meaning Crisis Ep 1.md",
+                "file": "Erase-Remove Idiom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Meaning Crisis Ep 1.md"
+                "file": "Erase-Remove Idiom.md"
               }
             }
           }
@@ -146,8 +159,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "357a75bcdf0950a6",
+  "active": "a61d18a86afdb585",
   "lastOpenFiles": [
+    "Meaning Crisis Ep 1.md",
     "index.md",
     "Game Engine notes.md",
     "The definitive guide to kafka.md",
@@ -156,7 +170,6 @@
     "Data.md",
     "Book notes.md",
     "Anki.md",
-    "080 Psychology and philosophy.md",
-    "010 Productivity.md"
+    "080 Psychology and philosophy.md"
   ]
 }

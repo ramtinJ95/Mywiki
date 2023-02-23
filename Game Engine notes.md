@@ -100,40 +100,42 @@ of inheritence.
   void Render();
   }
 Entity has a 1 to many relationship to the Component class:
-
-  class Component {
-    Entity* owner;
+``` cpp
+class Component {
+  Entity* owner;
   
-    virtual Update();
-    virtual Render();
-  }
+  virtual Update();
+  virtual Render();
+}
+```
 
 Then the following component classes inherit from our component class:
+``` cpp
+class TranformComponent: public Component {
+  glm::vec2 postion;
+  glm::bec2 scale;
+  double rotation;
 
-  class TranformComponent: public Component {
-    glm::vec2 postion;
-    glm::bec2 scale;
-    double rotation;
-  
-    Update() override {
-    }
-  
-    Render override {
-    }
+  Update() override {
   }
+
+  Render override {
+  }
+}
+```
 
 And then finally we have the entity manager class or registry, and there is only
 one instance of this class:
-
-  class Registry {
-    vector<Entity*> entities;
+``` cpp
+class Registry {
+  vector<Entity*> entities;
     
-    void AddEntity(entity);
-    void RemoveEntity(entity);
-    void Update(deltatime);
-    void Render();
+  void AddEntity(entity);
+  void RemoveEntity(entity);
+  void Update(deltatime);
+  void Render();
   }
-
+```
 ## Entity-Component-System
 As mentioned previously, ECS is what modern game engines use nowdays. This ECS
 pattern is a modification of the Component-Based Design that I mentioned
@@ -161,36 +163,54 @@ Component-Based system above which would have us have pointers to a bunch of
 objects all over the place in memory. 
 
 #### Example of ECS
+``` cpp
 
-  class Entity {
-    int id;
-  }
+class Entity {
+  int id;
+}
 
+struct TransformComponent {
+  glm::vec2 postion;
+  gl::vec2 scale;
+  double rotation;
+}
 
-  struct TransformComponent {
-    glm::vec2 postion;
-    gl::vec2 scale;
-    double rotation;
-  }
+class MovementSystem {
+  public:
+    MovementSystem() {
+      RequireComponent<TranformComponent>();
+    }
+    
+    void Update(double deltaTime) {
+      for (auto entity: GetEntities()){
+        TransformComponent& transform =
+        entity.GetComponent<TransformComponent>
+        
+        transform.position.x += rigidbody.velocity.x * deltatime;
 
-
-  class MovementSystem {
-    public:
-      MovementSystem() {
-        RequireComponent<TranformComponent>();
-      }
-      
-      void Update(double deltaTime) {
-        for (auto entity: GetEntities()){
-          TransformComponent& transform =
-          entity.GetComponent<TransformComponent>
-          
-          transform.position.x += rigidbody.velocity.x * deltatime;
-
+```
 Here we can see that each system is only going to interact with a subset of the
 entities in our scene depending on the components that they have, this adds yet
 another performance gain since we could in theory split the work up in threads
 and so on
+
+### System Component Signature
+In order for us to be able to write a method like RequireComponent and make it
+so that certain systems only interact with certain Entities which have certain
+components we need to create a sginature for each component.
+
+In my game engine implementation the type for the Signature will be:
+``` cpp
+MAX_COMPONENT = 32;
+
+typedef std::bitset<MAX_COMPONENTS> Signature;
+```
+This is basically an array with 32 bits where for each component 1 of the bits
+will be 1 for each component. But the trick here is that the index which is 1
+will represent which component it is. This also means that each component will
+now need to have an ID field. So our parent Component class will have an ID
+field.
+
 
 
 ---
