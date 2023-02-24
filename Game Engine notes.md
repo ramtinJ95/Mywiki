@@ -211,7 +211,22 @@ will represent which component it is. This also means that each component will
 now need to have an ID field. So our parent Component class will have an ID
 field.
 
+### Pool datastructure
+We need a place for the enities and components to live in memory. Also we want
+them to live close to each other i.e in a contigous block of memory. In order to
+do this we will have in our Registry/EntityManagment class something like:
+``` cpp
+std::vector<Pool*> componentPools;
+```
+The idea is that each index in this componentPools vector corresponds to 1 type
+of component. Each of the elemnts in this vector in the Registry class points to
+its own Pool object. This Pool type that we will define will contain a vector of
+all entities where the pool index is the entity id. 
 
+This means that the vector componentPools and the Pool objects form a matrix.
+Where each col is what component, and reach row is what entity has that
+component, and that entity list is what we will call a Pool of tranformComponent
+for example. 
 
 ---
 Status: :🌱:

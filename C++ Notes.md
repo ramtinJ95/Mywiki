@@ -1,4 +1,8 @@
 - [Compiling, Makefile, Linking, Header](Compiling, Makefile, Linking, Header)
 - [Object orientation in c++](Object orientation in c++)
+- [Template and Generics](Template and Generics)
+- [Erase-Remove Idiom](Erase-Remove Idiom)
+- [L-values and R-values](L-values and R-values)
+- [Move semantics](Move semantics)
 - [Header & Source file differences](Header & Source file differences)
 - [C++ Tooling](C++ Tooling)
