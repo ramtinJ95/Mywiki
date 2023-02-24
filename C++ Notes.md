@@ -4,5 +4,6 @@
 - [Erase-Remove Idiom](Erase-Remove Idiom)
 - [L-values and R-values](L-values and R-values)
 - [Move semantics](Move semantics)
+- [Smart Pointers](Smart Pointers)
 - [Header & Source file differences](Header & Source file differences)
 - [C++ Tooling](C++ Tooling)
