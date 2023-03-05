@@ -228,6 +228,13 @@ Where each col is what component, and reach row is what entity has that
 component, and that entity list is what we will call a Pool of tranformComponent
 for example. 
 
+### Collision System
+For the 2d game engine I choose to go with one of the most basic collision
+detection algorithms, i.e axis-aligned bounding-box even called as the AABB
+algorithm. Just search for it for an explanation, its very well documented and
+explained online, much better than anything I could write up here.  
+
+
 ---
 Status: :🌱:
 tags: [[030 Software Development.md]]
