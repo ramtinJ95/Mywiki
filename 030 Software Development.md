@@ -7,6 +7,9 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Game Engine
 [Game Engine notes](Game Engine notes)
 
+## Rust
+[Rust Notes](Rust Notes)
+
 ## General Software development 
 - [Code patterns](Code patterns)
 
