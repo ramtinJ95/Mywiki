@@ -235,6 +235,14 @@ algorithm. Just search for it for an explanation, its very well documented and
 explained online, much better than anything I could write up here.  
 
 
+### Removing Entites
+Since we are dealing with vectors and other datastructures we do not want to
+take the naive approach of constantly just adding new ids and when removing just
+remove them from the data structures that we have and have nullptr's. Instead we
+want to be able to have a deque(a doubble ended queue) in which we store ids
+which can be reused in our registry. 
+
+
 ---
 Status: :🌱:
 tags: [[030 Software Development.md]]

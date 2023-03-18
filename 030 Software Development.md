@@ -10,6 +10,9 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Rust
 [Rust Notes](Rust Notes)
 
+## Python
+[Python Notes](Python Notes)
+
 ## General Software development 
 - [Code patterns](Code patterns)
 
