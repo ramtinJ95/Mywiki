@@ -242,6 +242,28 @@ remove them from the data structures that we have and have nullptr's. Instead we
 want to be able to have a deque(a doubble ended queue) in which we store ids
 which can be reused in our registry. 
 
+### Event System
+We dont want to be in a situation where every system that is going to do
+anything that happens on for example collision has to be sent a parameter with
+all entity data and some kind of boolean that tells that function that okej now
+there was a collision and so on. Because potentially we will have many systems
+that are intrested in the collision event for example. 
+
+What we will do instead is create an event system which can be used by all
+systems in our ECS architecture such that they will only listen for events which
+they are interested in and systems that generate these events will put them on
+an eventbuss which will have subscribers. 
+
+There are many ways of implementing this, one naive way is to just put the
+events on the buss as they happen and then in the next update tick have all the
+systems reacting on the events that have been generated, this is called a
+passive event system. I will be going with a bit more sofisticated approach
+which is semi-blocking. This means that as soon as an event happens and there is
+a system that is listening for that event, the logic will be exectuted
+immedietly in that same update tick instead of waiting for the next one. I think
+this kind of approach will lead to less memory load and also lead to less bugs
+since its easier to think about, but the performance could take a hit, we will
+see how it goes.
 
 ---
 Status: :🌱:
