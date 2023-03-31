@@ -2,7 +2,7 @@
 # Science
 
 ### Math
-Calculus
+[Calculus](Calculus)
 [Linear Algebra](Linear Algebra)
 
 ### Neuroscience
@@ -25,4 +25,4 @@ Calculus
 [[Papers I Have Read]]
 
 
-## Podcasts
+## [Podcasts](Podcasts)
