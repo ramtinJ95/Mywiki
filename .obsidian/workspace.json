@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "56b8e6f9813e0508",
+        "id": "147c11ec4ead8c0c",
         "type": "tabs",
         "children": [
           {
-            "id": "357a75bcdf0950a6",
+            "id": "6727194960bbfcff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Game Engine notes.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a61d18a86afdb585",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Erase-Remove Idiom.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Erase-Remove Idiom.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Erase-Remove Idiom.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Erase-Remove Idiom.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,11 +138,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a61d18a86afdb585",
+  "active": "6727194960bbfcff",
   "lastOpenFiles": [
+    "Game Engine notes.md",
+    "Erase-Remove Idiom.md",
     "Meaning Crisis Ep 1.md",
     "index.md",
-    "Game Engine notes.md",
     "The definitive guide to kafka.md",
     "Using Spaced Revision Systems.md",
     "Data mesh.md",
