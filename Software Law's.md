@@ -28,4 +28,10 @@ upon something true:
   the best one for our situation. But we are doing this without really knowing
   that we are doing it and thus throwing away a huge chunk of the possible
   outcome space that we now will never see. The reason for this is that
-  communication between teams is much harder then communication in a team.
+  communication between teams is much harder then communication in a team. But
+  what this law did not take into consideration is the temporal aspect. Because
+  the way we do software now is that legacy code just keeps shipping with the
+  new versions of products so we end up in situations like windows and its 4
+  different volume controllers. Because we need to add all versions through time
+  of the org chart into the same graph to see what we actually see in the
+  product.
