@@ -15,6 +15,8 @@ Here all the notes around topics and learnings around SWE will have their root
 
 ## General Software development 
 - [Code patterns](Code patterns)
+- [Useful code snippets](Useful code snippets)
+- [Software Law's](Software Law's)
 
 ---
 Status: :🗺️:
