@@ -73,3 +73,40 @@ Because x+1 is an expression and thus it returns a i32 which we have said that
 this function will return. If we where to add a semicolon to this then it would
 become a statment and return nothing, or it would return the unit type (), which
 is not what we promised that the funcion would return. 
+
+#### Control flow
+One special thing that Rust has when it comes to repeting code is the loop. This
+is a special kind of loop that just goes on forever like a while true loop. One
+cool that is possible is that if we have multiple loops that are nested and we
+want to break out of a loop that is not in the scope that is currently running
+we can add lables and then break out of the parent loop through the use of the
+label:
+
+
+```rust
+fn main() {
+    let mut count = 0;
+    'counting_up: loop {
+        println!("count = {count}");
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            if remaining == 9 {
+                break;
+            }
+            if count == 2 {
+                break 'counting_up;
+            }
+            remaining -= 1;
+        }
+
+        count += 1;
+    }
+    println!("End count = {count}");
+}
+``` 
+
+### Ownership
+For this part there is too much to take notes on just read the documentation,
+anything I write would be inferior: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html 
