@@ -110,3 +110,63 @@ fn main() {
 ### Ownership
 For this part there is too much to take notes on just read the documentation,
 anything I write would be inferior: https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html 
+
+
+### Structs and methods
+We can define a struct like any other language by simply doing:
+
+
+```rust
+struct Rectangle {
+  width: u32,
+  height: u32,
+}
+```
+or if we want to create a struct which is in princple a type of tuple that makes
+sense in our domain we can do
+
+```rust
+struct Point(i32, i32, i32);
+``` 
+Now it is possible to also define functions within the context of these struct
+types, and these are called methods. Whats special in Rust in this regard is
+that we do this outside the struct block, in what is called an implementation
+block, impl. Like so:
+
+
+```rust
+impl Rectangle {
+  fn area(&self) -> u32 {
+    self.width * self.height
+  }
+}
+``` 
+Methods must have a parameter named self of type Self for their first 
+parameter. Note that we still need to use the & in front of the self 
+shorthand to indicate that this method borrows the Self instance, just as we 
+did in rectangle: &Rectangle. Methods can take ownership of self, borrow self 
+immutably, as we’ve done here, or borrow self mutably, just as they can any 
+other parameter.
+
+These functions that are defined in a impl block are called associated
+functions since they are assosciated with the type named after the impl. Note
+that it is possible to define associated function that dont have self as their
+first parameter (and thus are not methods) because they dont need an instance of
+the type to work with. An example of this is:
+
+```rust
+impl Rectangle {
+  fn square(size: u32) -> Self {
+    Self {
+      width: size,
+      height: size,
+    }
+  }
+}
+```
+The Self keywords in the return type and in the body of the function are aliases
+for the type that apperas afer the impl keyword, which in this case is
+Rectangle.
+
+It is possible to have multiple impl blocks for the same type but rarely is that
+a useful thing to do since it will just look confusing. 
