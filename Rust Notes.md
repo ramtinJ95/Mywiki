@@ -170,3 +170,7 @@ Rectangle.
 
 It is possible to have multiple impl blocks for the same type but rarely is that
 a useful thing to do since it will just look confusing. 
+
+
+### Enums and pattern matching
+
