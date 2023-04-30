@@ -173,4 +173,66 @@ a useful thing to do since it will just look confusing.
 
 
 ### Enums and pattern matching
+The problem with, or rather the major limitation of structs is that they are not
+quite as flexiable as Enums. Say that we want to have a collection of primitve
+shapes such as triangles, squares and rectangles. With the struct approach we
+would have to create a new struct with essentially the same code for all of
+these but with Enums we can express our need in a concise manner.
+
+```rust
+enum IpAddrKind {
+  V4,
+  V6,
+}
+
+let four = IpAddrKind::V4;
+let six = IpAddrKind::V6;
+``` 
+
+We can then create a function that takes in the enum type and works for all the
+possible enum values, something that would have require a new funciton for each
+new strut otherwise
+
+```rust
+fn route(ip_kind: IpAddrKind) {}
+``` 
+
+If one would like to store some data associated with a type of the enum we can
+do that directly when we define the diffrent enums. Note that it is possible for
+the different enum valus to be associated or "hold" data that is off diffrent
+types within the same enum defintion. 
+
+```rust
+enum IpAddr {
+    V4(String),
+    V6(String),
+}
+let home = IpAddr::V4(String::from("127.0.0.1"));
+let loopback = IpAddr::V6(String::from("::1"));
+``` 
+If we have different data types for each value it looks like this:
+
+```rust
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+``` 
+One more important similarity between strucs and enums is that just as we are
+able to define methods on structs using impl, we can do the same with enums:
+
+
+```rust
+impl Message {
+    fn call(&self) {
+        // method body would be defined here
+    }
+}
+
+let m = Message::Write(String::from("hello"));
+m.call();
+``` 
+#### The option Enum
 
