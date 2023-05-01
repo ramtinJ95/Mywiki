@@ -235,4 +235,20 @@ let m = Message::Write(String::from("hello"));
 m.call();
 ``` 
 #### The option Enum
+Rust does not have the Null type in its type system. Instead we have the Option
+enum that is defind by the standard library. For example, if you request the 
+first item in a non-empty list, you would get a value. If you request the first
+item in an empty list, you would get nothing. Expressing this concept in terms 
+of the type system means the compiler can check whether you’ve handled all the
+cases you should be handling; this functionality can prevent bugs that are
+extremely common in other programming languages.
+
+The implementation of this Enum is
+
+```rust
+enum Option<T> {
+  None,
+  Some(T),
+}
+``` 
 
