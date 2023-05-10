@@ -251,4 +251,18 @@ enum Option<T> {
   Some(T),
 }
 ``` 
+Some special things to keep in mind when using the Option enum is for example
+when we have the following situation:
 
+```rust
+let x: i8 = 5;
+let y: Option<i8> = Some(5);
+let sum = x + y;
+``` 
+This code will not compile beause i8 and option<i8> are different types and thus
+rust does not know how to add these types. This means that in order for this to
+compile we need to convert the Option<T> to T type and also handle the case when
+this value can be missing since that is a possiblity with the Option<T> type. To
+get the Type T and many more things that is possible to do, one needs to check
+the documentaiton for the Option enum. This is an important enum so its good
+to get familiar with it in order to become a good Rust developer. 
