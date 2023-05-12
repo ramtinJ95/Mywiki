@@ -266,3 +266,29 @@ this value can be missing since that is a possiblity with the Option<T> type. To
 get the Type T and many more things that is possible to do, one needs to check
 the documentaiton for the Option enum. This is an important enum so its good
 to get familiar with it in order to become a good Rust developer. 
+
+#### Match and pattern matching
+This is very similar to the patter matching stuff that Haskell does.
+
+```rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+
+```
+The use of the match pattern goes pretty deep in Rust and one can get quite
+creative with how to use it. This is really cool because this creativity is risk
+free in Rust because the compiler will tell you if you have missed to account
+for an edge case or if you have missed a possible outcome completely. 
