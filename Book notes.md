@@ -8,6 +8,7 @@ of the notes will be more review style, but not all.
 ## Book Notes
 - [Data mesh](Data mesh)
 - [The definitive guide to kafka](The definitive guide to kafka)
+- [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
 
 ## Books read in 2023
 - Data mesh
@@ -34,6 +35,8 @@ List of books I have read
  - Fundamentals of data engineering 2022-10-26
  - Data mesh 2022-12-14
  - Kafka the definitive Guide 2023-01-14
+ - Modern software engineering 2023-03-05
+ - Data Pipelines Pocket Reference 2023-05-23
 
 
 ---
