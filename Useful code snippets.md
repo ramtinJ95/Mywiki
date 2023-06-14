@@ -20,3 +20,14 @@ run the following
 git branch | grev -v "main" | xargs git branch -D 
 ```
 
+
+This little snippet is super cool. It show how one can generate many sql queries
+by just using plain sql, super coolt
+```sql
+
+SELECT 'GRANT ALTER ON TABLE ' || table_schema || '.' || table_name || ' TO aeadmin;' AS grant_statement
+FROM information_schema.tables
+WHERE table_schema = 'snapshots';
+
+```
+
