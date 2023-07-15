@@ -50,7 +50,7 @@ tags:
 	  had during the day and these have to be fleshed out or thrown away at
 	  the end of the day.
 	
-## Lists [[Business Ideas]] [[Books I have read]] [[Book to read]]
+## Lists [[Business Ideas]] [[Book to read]]
 
 ##### Keeping a Diary in Vim
 useful commands for using the vimwiki diary functionallity:

@@ -9,6 +9,7 @@ of the notes will be more review style, but not all.
 - [Data mesh](Data mesh)
 - [The definitive guide to kafka](The definitive guide to kafka)
 - [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
+- [The Staff Engineer's Path](The Staff Engineer's Path)
 
 ## Books read in 2023
 - Data mesh
