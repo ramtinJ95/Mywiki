@@ -39,3 +39,24 @@ significantly impact processing time, especially on large tables. So be careful
 when choosing many unique kets to include in the incremental model in order to
 avoid negative impacts on performance. 
 
+# Redshift
+## Rules to get good join performance
+The merge join is the Holy Grail.
+This is the and the only method which allows the timely joining of two Big Data
+tables.
+It comes with a wide range of constraints and restrictions, all of which must
+be met for the merge join to be viable. AWS have never actually enumerated
+the conditions and restrictions, but you can either figure them out from first
+principles or you notice them over time; the join must be an equijoin (all join
+clauses must use the “equals” operator), the columns in the join must be a
+contiguous subset of the sorting order for both tables which begins with the
+first column in the sorting order - so the first column in the sort order must
+be joined, then you could also join the second, and the third, and so on, but
+you could not join on the third only, or the second and the third - and both
+tables must be up-to-date with VACUUM, and both tables must have the same
+distribution key.
+So here again you can see - the tables must be designed correctly so they can
+merge join, which is hard enough, but then also the user must get the query
+right. The query must follow the sorting orders of the tables.
+If you can manage all this, life is amazing. A merge join passes once down each
+table, uses no memory or processor time to speak of.
