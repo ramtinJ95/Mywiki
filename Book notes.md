@@ -10,6 +10,7 @@ of the notes will be more review style, but not all.
 - [The definitive guide to kafka](The definitive guide to kafka)
 - [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
 - [The Staff Engineer's Path](The Staff Engineer's Path)
+- [Learning Spark](Learning Spark)
 
 ## Books read in 2023
 - Data mesh
@@ -31,13 +32,14 @@ List of books I have read
  - Data science without makeup by Mikhail Zhilkin 2022-04-30
  - The Nature of Software Development: Keep It Simple, Make It Valuable, Build It Piece by Piece by Ron Jefferes 2022-05-07
  - Designing Data Intensive Applications by Martin Kleppmann 2022-06-27
- -  Evolutionary architecture 2022-07-16
+ - Evolutionary architecture 2022-07-16
  - The pragmatic programmer 2022-08-18
  - Fundamentals of data engineering 2022-10-26
  - Data mesh 2022-12-14
  - Kafka the definitive Guide 2023-01-14
  - Modern software engineering 2023-03-05
  - Data Pipelines Pocket Reference 2023-05-23
+ - The Staff Engineers's Path 2023-07-15
 
 
 ---
