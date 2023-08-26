@@ -1,5 +1,8 @@
 Here all the notes around topics and learnings around SWE will have their root
 
+## AI/Machine Learning
+[Projects/Ideas](Projects/Ideas)
+[LLMs](LLMs)
 
 ## C++
 [C++ Notes](C++ Notes)
