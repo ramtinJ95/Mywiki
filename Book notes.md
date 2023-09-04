@@ -11,6 +11,8 @@ of the notes will be more review style, but not all.
 - [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
 - [The Staff Engineer's Path](The Staff Engineer's Path)
 - [Learning Spark](Learning Spark)
+- [Learning SQL](Learning SQL)
+- [System Design Interview](System Design Interview)
 
 ## Books read in 2023
 - Data mesh
