@@ -31,3 +31,30 @@ WHERE table_schema = 'snapshots';
 
 ```
 
+
+This little snippet is a good example of how to find duplicate rows and then
+look at them to being able to debug it faster. 
+```sql
+
+WITH find_duplicates AS (
+
+	select
+		id, 
+		count(*) AS c
+	FROM looker_models.dim_series_latest
+	GROUP BY id
+	HAVING c  >1
+
+),
+
+duplicates AS (
+
+	SELECT dim_series_latest.* 
+	FROM looker_models.dim_series_latest
+	INNER JOIN find_duplicates
+	ON dim_series_latest.id = find_duplicates.id 
+
+)
+
+SELECT * FROM duplicates
+```
