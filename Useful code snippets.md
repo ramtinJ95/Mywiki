@@ -31,7 +31,6 @@ WHERE table_schema = 'snapshots';
 
 ```
 
-
 This little snippet is a good example of how to find duplicate rows and then
 look at them to being able to debug it faster. 
 ```sql
@@ -57,4 +56,52 @@ duplicates AS (
 )
 
 SELECT * FROM duplicates
+```
+
+This little snippet is how I built the clustering of vote pins:
+
+
+```sql
+ RESPONDENTS_SQL = <<~SQL
+          SELECT COUNT(DISTINCT identifier_id) as respondents
+          FROM vote_pins
+          WHERE question_id = ? AND session = ?
+        SQL
+
+        NO_AGGREGATION_SQL = <<~SQL
+          SELECT st_x(pin) AS percentage_x, st_y(pin) AS percentage_y, session
+          FROM vote_pins
+          WHERE  question_id = ?
+        SQL
+
+        AGGREGATION_SQL = <<~SQL
+          SELECT ST_NumGeometries(t.cluster) AS num_pins, st_x(ST_Centroid(t.cluster)) AS percentage_x, st_y(ST_Centroid(t.cluster)) AS percentage_y
+          FROM (
+            SELECT unnest(st_ClusterWithin(pin, ?)) AS cluster
+            FROM vote_pins WHERE question_id = ?
+            AND session = ?
+          ) AS t
+          GROUP BY t.cluster
+        SQL
+
+        CORRECT_AREA_AGGREGATION_SQL = <<~SQL
+          SELECT ST_NumGeometries(t.cluster) AS num_pins,
+                st_x(ST_Centroid(t.cluster)) AS percentage_x,
+                st_y(ST_Centroid(t.cluster)) AS percentage_y,
+                t.is_correct AS is_correct
+          FROM
+            (SELECT unnest(st_ClusterWithin(pin, :pin_distance)) AS CLUSTER,
+                    ST_Contains(
+                                  (SELECT geometry
+                                  FROM correct_areas
+                                  WHERE question_id = :question_id
+                                  AND SESSION = :session ),
+                                  pin) AS is_correct
+            FROM vote_pins
+            WHERE question_id = :question_id
+              AND SESSION = :session
+            GROUP BY is_correct) AS t
+          GROUP BY t.cluster,
+                  t.is_correct
+        SQL
 ```
