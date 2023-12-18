@@ -16,6 +16,9 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Python
 [Python Notes](Python Notes)
 
+## Nand2Tetris
+[Nand2Tetris notes](Nand2Tetris notes)
+
 ## General Software development 
 - [Code patterns](Code patterns)
 - [Useful code snippets](Useful code snippets)
