@@ -33,3 +33,16 @@ defined as:
 
 c = 2^n - x if x != 0, otherwise if x is zero the c (2's complement) is also 0.
 
+
+### Example
+In practice this means that if we want to represent -5 we take 16 - 5 = 11, 11
+in binary is 1011 which is the 2's complement representation of -5. 
+
+One shortcut to converting numbers to their negative alternative, i.e x to -x is
+to flip all the bits of x and add 1.
+
+Say we have the number 7 in binary that is 0111 so we flip all the bits, i.e
+1000 and then we add 1 -> 1001, this is the representation of -7 in 2s
+complement. Which we can also see is correct when we take 16 - 7 = 9 and 1001 is
+the same as 9. So we can be sure that this shortcut so to say works. 
+
