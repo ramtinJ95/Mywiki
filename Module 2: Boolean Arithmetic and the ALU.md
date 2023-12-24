@@ -46,3 +46,7 @@ Say we have the number 7 in binary that is 0111 so we flip all the bits, i.e
 complement. Which we can also see is correct when we take 16 - 7 = 9 and 1001 is
 the same as 9. So we can be sure that this shortcut so to say works. 
 
+
+This shortcut way of converting number to their negative version is what I will
+implement in the hardware emulator since its so easy to do. One needs only to
+use a not gate and thats it. 
