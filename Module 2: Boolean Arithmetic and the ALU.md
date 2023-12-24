@@ -49,4 +49,6 @@ the same as 9. So we can be sure that this shortcut so to say works.
 
 This shortcut way of converting number to their negative version is what I will
 implement in the hardware emulator since its so easy to do. One needs only to
-use a not gate and thats it. 
+use a not gate and thats it. Further more this means that when we want to
+implement substraction of say x - y, we can just do x + (-y) instead, thus we
+can use the gates we already have to do addition and substraction. 
