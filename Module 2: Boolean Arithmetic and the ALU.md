@@ -52,3 +52,5 @@ implement in the hardware emulator since its so easy to do. One needs only to
 use a not gate and thats it. Further more this means that when we want to
 implement substraction of say x - y, we can just do x + (-y) instead, thus we
 can use the gates we already have to do addition and substraction. 
+
+
