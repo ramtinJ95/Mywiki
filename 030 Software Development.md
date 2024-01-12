@@ -19,6 +19,13 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Nand2Tetris
 [Nand2Tetris notes](Nand2Tetris notes)
 
+
+## Certification studies
+- [AWS](AWS)
+- GCP
+- Snowflake
+- Azure
+
 ## General Software development 
 - [Code patterns](Code patterns)
 - [Useful code snippets](Useful code snippets)
