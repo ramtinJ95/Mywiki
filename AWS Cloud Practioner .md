@@ -8,3 +8,4 @@ for all other certifications.
 - [Module 6 Security](Module 6 Security)
 - [Module 7 Monitoring and analytics](Module 7 Monitoring and analytics)
 - [Module 8, Module 9, Module 10](Module 8, Module 9, Module 10)
+- [Exam prep notes](Exam prep notes)
