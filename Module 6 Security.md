@@ -57,3 +57,8 @@ GuardDuty. If threats are discoverd you can find the list and recommended
 remedies in the amazon managament consol. You can also configure aws lambda
 functuins to take remedition steps automatically in response to GuardDuty's
 findings. 
+
+one key difference between WAF and Shield is that Shield operates at a lower
+level in the network stack and can thus protect against DDoS attack. While WAF
+operates at a high level in the stack and thus it can take action based on
+specific contents od web traffic and requests.
