@@ -19,9 +19,12 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Nand2Tetris
 [Nand2Tetris notes](Nand2Tetris notes)
 
+## Compiler and programming language design/building
+- [Study plan](Study plan)
+- [Notes](Notes)
 
 ## Certification studies
-- [AWS](AWS)
+- [aWS](AWS)
 - GCP
 - Snowflake
 - Azure
@@ -31,6 +34,10 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Useful code snippets](Useful code snippets)
 - [Software Law's](Software Law's)
 - [General SWE algo interview prep](General SWE algo interview prep)
+
+
+## My presentitions
+- [Intro to dbt](Intro to dbt)
 
 ---
 Status: :🗺️:

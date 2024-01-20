@@ -8,7 +8,7 @@
   - Nämn etl vs elt
   - visa vart i stacken dbt lever
 - Vad för problem löser dbt / varför dbt : 
-  - Gå igenom deras viewpoint artikel
+  - Gå igenom dbt labs viewpoint artikel
   - 
 - 5 core dbt features
   - Allt är select statement
