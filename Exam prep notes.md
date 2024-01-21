@@ -34,3 +34,9 @@ requirements of the batch jobs submitted.
   by reducing energy consumption and increasing efficiency across all
   components of a workload by maximizing the benefits from the benefits from
   the provisioned resources and minimizing the total resources required. 
+
+
+## AWS CAF
+
+## Notes from youtube aws ccp cert course
+
