@@ -24,7 +24,7 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Notes](Notes)
 
 ## Certification studies
-- [aWS](AWS)
+- [AWS](AWS)
 - GCP
 - Snowflake
 - Azure

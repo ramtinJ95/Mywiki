@@ -38,5 +38,19 @@ requirements of the batch jobs submitted.
 
 ## AWS CAF
 
-## Notes from youtube aws ccp cert course
 
+## Notes from youtube aws ccp cert course
+11
+
+AWS Macie is a machine learning service that helps detect sensitive data stored
+in aws.
+
+AWS GuardDuty is a service that helps monitor aws accounts for potential
+security threats.
+
+AWS coginto, need to figure out what this is.
+AWS Storage Gateway, need to figure out what this is.
+AWS Connect, need to figure out what this is.
+
+AWS Local zones, support reducing latency for end users by enabling a limited
+number of compute and storage services locally to users. 
