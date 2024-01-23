@@ -42,7 +42,7 @@ that come in your web applicatons. WAF works together with CloudFront and an
 applicaton load balancer. It does this by using ACL to protect your aws
 resources.
 
-__Amazon Inspector__ help to improvethe security and compliance of applicatons
+__Amazon Inspector__ help to improve the security and compliance of applicatons
 by running automated security assesments. It checks applications for security
 vulnaerabilities and deviations from security best practises, such as open
 access to EC2 instances and installations of vulnerable software versions.

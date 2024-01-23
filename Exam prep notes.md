@@ -37,20 +37,27 @@ requirements of the batch jobs submitted.
 
 
 ## AWS CAF
-
+- __Business__ The Business perspective helps ensure that your cloud investments accelerate your digital transformation ambitions and business outcomes. Common stakeholders include chief executive officer (CEO), chief financial officer (CFO), chief operations officer (COO), chief information officer (CIO), and chief technology officer (CTO).
+- __People__ The People perspective serves as a bridge between technology and business, accelerating the cloud journey to help organizations more rapidly evolve to a culture of continuous growth, learning, and where change becomes business-as-normal, with focus on culture, organizational structure, leadership, and workforce. Common stakeholders include CIO, COO, CTO, cloud director, and cross-functional and enterprise-wide leaders.
+- __Governance__ The Governance perspective helps you orchestrate your cloud initiatives while maximizing organizational benefits and minimizing transformation-related risks. Common stakeholders include chief transformation officer, CIO, CTO, CFO, chief data officer (CDO), and chief risk officer (CRO).
+- __Platform__ The Platform perspective helps you build an enterprise-grade, scalable, hybrid cloud platform, modernize existing workloads, and implement new cloud-native solutions. Common stakeholders include CTO, technology leaders, architects, and engineers.
+- __Security__ The Security perspective helps you achieve the confidentiality, integrity, and availability of your data and cloud workloads. Common stakeholders include chief information security officer (CISO), chief compliance officer (CCO), internal audit leaders, and security architects and engineers.
+- __Operations__ The Operations perspective helps ensure that your cloud services are delivered at a level that meets the needs of your business. Common stakeholders include infrastructure and operations leaders, site reliability engineers, and information technology service managers.
 
 ## Notes from youtube aws ccp cert course
-11
-
 AWS Macie is a machine learning service that helps detect sensitive data stored
 in aws.
 
 AWS GuardDuty is a service that helps monitor aws accounts for potential
 security threats.
 
-AWS coginto, need to figure out what this is.
-AWS Storage Gateway, need to figure out what this is.
-AWS Connect, need to figure out what this is.
+AWS coginto: Implement secure, frictionless customer identity and access management that scales. This essentially means that it is a service for customers or users of a platform to login etc into some kind of a UI, but this service manages the accounts of those users. 
+
+AWS Storage Gateway provides on-premise application with access to cloud storage
+through. This is usually used together with direct connect since customers using
+this need a higher level of security.
+
+Amazon Connect is an omnichannel cloud contact center. You can set up a contact center in a few steps, add agents who are located anywhere, and start engaging with your customers.You can create personalized experiences for your customers using omnichannel communications. For example, you can dynamically offer chat and voice contact, based on such factors as customer preference and estimated wait times. Agents, meanwhile, conveniently handle all customers from just one interface. For example, they can chat with customers, and create or respond to tasks as they are routed to them.
 
 AWS Local zones, support reducing latency for end users by enabling a limited
 number of compute and storage services locally to users. 
