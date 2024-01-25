@@ -77,4 +77,10 @@ Differences between aws direct connect and aws site to site vpn.
 Differences and when to use the different service which is aws kms and aws
 secret manager.
 
-13
+Amazon detective can be used to analyze and visualize security data to
+investigate potential security issues. It collect and analyses data from
+multiple sources like AWS cloudtrail, vpc flow logs and guardduty findings.
+Based upon unified findings created by amazon detective, the security team can
+quickly determine the root cause of the security threat. 
+
+27
