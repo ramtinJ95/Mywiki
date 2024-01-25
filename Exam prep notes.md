@@ -1,13 +1,5 @@
 # AWS cloud practioner exam practice notes 
 
-what is an active disaster recovery strategy?
-
-from practise test it looks like there is quite a bit of focus on EC2.
-
-what is AWS AMI? this one has came up a couple of times.
-
-Inspector is mostly used for checking security of containers.
-
 ### AWS Lightsail and AWS Batch
 Amazon Lightsail is designed to be the easiest way to launch and manage a virtual private server with AWS. Lightsail plans include everything you need to
 jumpstart your project – a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP address – for a low, predictable price.
@@ -57,7 +49,32 @@ AWS Storage Gateway provides on-premise application with access to cloud storage
 through. This is usually used together with direct connect since customers using
 this need a higher level of security.
 
+AWS Transit Gateway enables customers to connect thousands of VPCs. You can
+attach your hybrid connectivity (VPN and Direct Connect connections) to a single
+Transit Gateway instance, consolidating and controlling your organizations
+entire AWS routing confugration in one place.
+
 Amazon Connect is an omnichannel cloud contact center. You can set up a contact center in a few steps, add agents who are located anywhere, and start engaging with your customers.You can create personalized experiences for your customers using omnichannel communications. For example, you can dynamically offer chat and voice contact, based on such factors as customer preference and estimated wait times. Agents, meanwhile, conveniently handle all customers from just one interface. For example, they can chat with customers, and create or respond to tasks as they are routed to them.
+
+AWS Fargate is a serverless compute engine for containes that works with both
+ECS and EKS. Fargate makes it easy to focus on building your applications.
+Fargate eliminates the need to provision and manage servers, lets you specify
+and pay for resources per application, and improves security through application
+isolation by design.
+
+AWS Concierge Team are AWS billing and account experts that specoalize in
+working with enterprise accounts and are included as part of the enterprise
+support plan. 
 
 AWS Local zones, support reducing latency for end users by enabling a limited
 number of compute and storage services locally to users. 
+
+S3 different pricing for different storage and access levels need to get a good
+grip on it before the exam.
+
+Differences between aws direct connect and aws site to site vpn.
+
+Differences and when to use the different service which is aws kms and aws
+secret manager.
+
+13
