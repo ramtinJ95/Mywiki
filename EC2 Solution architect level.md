@@ -178,6 +178,36 @@ short overview:
 - EBS Volumes are characterized in Size | Throughput | IOPS
 - Only gp2/gp3 and io1/io2 Block Express can be used as boot volumes
 
+__EBS Multi-attach - io1/io2 family__
+- Attach the same EBS volume to multiple EC2 instances in the same AZ
+- Each instance has full read & write permissions to the high performance volume
+- Use case:
+  - Achieve higher application availability in clustered Linux applications (ex
+    Teradata)
+  - Applications mush manage concurrent write operations
+- Up to 16 EC2 instances at a time max.
+- Must use a file system that is cluster aware (i.e not XFS, EXT4 etc) 
+
+##### EBS Encryption
+- When you create an encrypted EBS volume, you get the following:
+  - Data at rest is encrypted inside the volume
+  - All the data in flight moving between the instance and the volume is
+    encrypted
+  - All snapshots are encrypted
+  - All volumes created from the snapshot are encrypted
+- Encryption and decryption are handled transparently
+- Encryption has a minimal impact on latency
+- EBS encryption leverages keys from KMS (AES-256)
+- Copying an unencrypted snapshot allows encryption
+- Snapshots of encrypted Volumes are encrypted
+
+To encrypt an unencrypted EBS volume you would do the following:
+- Create an EBS snapshot of the volume
+- Encrypt the EBS snapshot (using copy)
+- Create new EBS volume from the snapshot (the volume vill also be encrypted as
+  we know)
+- Now you can attach the encrypted volume to the original instance
+
 #### EC2 Instance Store
 EBS volumes are network drives with good but "limited" perfomance. If you need a
 high-performance hardware disk, use EC2 Instance store instead.
@@ -199,7 +229,50 @@ high-performance hardware disk, use EC2 Instance store instead.
   - A public AMI: AWS provided
   - Your own AMI: you make and maintain them yourself
   - an AWS Marketplace AMI: an AMI someone else made and potentially sells.
+
 #### EFS
+- EFS is a managed NFS (network file system) that can be mounted on many EC2
+  instances
+- EFS works with EC2 instances in multi-AZ
+- Highly available, scalable, expensive and pay per use
+
+Overview of Amazon EFS
+- Use cases: content managment, web serving, data sharing, Wordpress
+- Uses NFSv4.1 protocol
+- Uses security group to control access to EFS
+- Compatible with Linux based AMI (not Windows)
+- Encryption at rest using KMS
+- POSIX file system (Linux) that has a standard file API
+- File system scales automatically, pay-per-use, no need for capacity planning.
+
+EFS - Performance classes
+- EFS Scale:
+  - 1000s of concurrent NFS clients, 10 GB/s throughput
+  - Grow to Petabyte-scale network file system, automatically
+- Performance Mode (set at EFS creating time):
+  - General purpose (default) - latency-sensitive use cases (web server, CMS,
+    etc)
+  - Max I/O - higher latency, throughput, highly parallel (big, data, media
+    processing)
+- Throughput Mode:
+  - Bursting - 1TB = 50 MiB/s burst of up to 100 MiB/s
+  - Provisioned set your throughput regardless of storage size, ex: 1 GiB/s for
+    1 TB storage
+  - Elastic - automatically scales throughput up or down based on your workloads
+    - Up to 3GiB/s for reads and 1GiB/s for writes
+    - Used for unpredictable workloads
+    - 
+
+EFS - Storage classes
+- Storage tiers (lifecycle managment feature - move file after N days)
+  - Standard: for frequently accessed files
+  - Infrequent access (EFS-IA): cost to retrieve files, lower price to store.
+    Enable EFS-IA with a lifecycle policy
+- Availability and durability
+  - Standard: Multi-AZ, great for prod
+  - One Zone: One AZ, great for dev, backup enabled by default, compatible with
+    IA (EFS one zone-IA)
+- Over 90% in cost savings.
 
 
 #### General discussion around EFS and EBS
