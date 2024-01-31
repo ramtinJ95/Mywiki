@@ -98,3 +98,16 @@ Use cases:
 - Long-running processing
 - Saving the RAM state
 - Services that take time to initialize
+
+## EC2 Instance Storage Section
+
+#### EBS
+
+
+#### AMI
+
+
+#### EFS
+
+
+#### General discussion around EFS and EBS
