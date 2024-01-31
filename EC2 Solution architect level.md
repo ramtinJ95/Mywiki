@@ -132,6 +132,63 @@ __EBS Snapshots__
     but this is super expensive and should only be used when we have a huge EBS
     with important data that needs to be spun up fast.
 
+__EBS Volume Types__
+short overview:
+- EBS Volumes come in 6 types
+  - gp2/gp3: general purpose SSD volume that balances price and performance for
+    a wide variery of workloads
+    - Cost effective storage, low-latency
+    - System boot volumes, Virual desktops, Development and test environments
+    - 1 GiB - 16 TiB
+    - gp3:
+      - Baseline of 3000 IOPS and throughput of 125 MiB/s
+      - Can increase IOPS up to 16000 and throughput up to 1000 Mib/s
+        independently
+    - gp2:
+      - Older generation of general purpose ssds
+      - Small gp2 volumes can burst IOPS to 3000
+      - size of the volume and IOPS are linked, max IOPS is 16000
+  - Provisioned IOPS io1/io2 Block express (SSD): Highest performance SSD volume for mission
+    critical low-latency or high-throughput workloads great for database
+    workloads.
+    - Great for critical business applications with sustained IOPS performance
+      requirements or applications that need more than 16000 iops
+    - io1 (4 GiB - 16 TiB):
+      - Max IOPS 64000 for Nitro EC2 instances & 32000 for other
+      - Can increase IOPS independently from storage size
+    - io2 Block Express (4 GiB - 64 TiB):
+      - Sub-millisecond latency
+      - Max IOPS 256000
+    - Supports EBS Multi-attach
+  - Hard Disk Drives:
+    - Cannot be a boot volume
+    - 125 GiB to 16 TiB
+    - Throughput optimizes HDD(st1):
+      - Low cost HDD volume designed for frequently accessed, throughput
+      intensive workloads
+      - Big Data, Data Warehouses, Log processing
+      - Max throughput 500 Mib/s - max IOPS 500
+    - Cold HDD (sc1): 
+      - Lowest cost HDD volume designed for less frequently accessed
+      workloads
+      - For data that is infrequently accessed
+      - Scenarios where lowest cost is important
+      - Max throughput 250 Mib/s max IOPS 250
+
+- EBS Volumes are characterized in Size | Throughput | IOPS
+- Only gp2/gp3 and io1/io2 Block Express can be used as boot volumes
+
+#### EC2 Instance Store
+EBS volumes are network drives with good but "limited" perfomance. If you need a
+high-performance hardware disk, use EC2 Instance store instead.
+
+- Better I/O performance
+- EC2 Istance store lose their storage if they are stopped ( this is called
+  ephemeral storage)
+- Good for buffer / chache / scratch data / temp content
+- Risk of data loss if hardware fails, since this type of storage is directly
+  attached to the hardware which the EC2 instance is running on
+- Backups and Replication is your responsibility.
 
 #### Amazon Machine Image (AMI)
 - AMI is a customization of an EC2 instance
