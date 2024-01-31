@@ -64,7 +64,37 @@ This is mostly used for partition aware big data applications such as Kafka,
 hadoop and Cassandra. 
 
 ## Elastic Network Interfaces (ENI)
+Logical component in a VPC that represents a virtual network card. The ENI can
+have the following attributes:
+- Primary private IPv4, one or more secondary IPv4
+- One Elastic IP per private IPv4
+- One Public IPv4
+- One or more security groups
+- A MAC address
 
+You can create ENI indenpendently and attack them on the fly (move them) on EC2
+instances for failover. These ENI are bound to a specific AZ. 
+
+for more detailed information read: https://aws.amazon.com/blogs/aws/new-elastic-network-interfaces-in-the-virtual-private-cloud/
 
 ## EC2 Hibernate
+So in the normal case we working with EC2 instances we know we can stop and
+terminate instances. Stopping an instance, then the data on disk when using EBS
+( Elastic Block Storage) is kept intact in the next start. Terminating an
+instance, then any EBS volumes (root) also set-up to be destroyed is lost. 
 
+Then when we start an EC2 instance the following happens:
+- First start: The OS boots and the EC2 User Data script is run
+- Following starts: the OS boots up
+- Then your applications starts, caches get warmed up, and that can take time! 
+
+So instead we can use EC2 Hibernate:
+- The in-memory (RAM) state is preserved
+- The instances boot is much faster, because the OS is not stopped / restarted)
+- Under the hood: the RAM state is written to a file in the root EBS volume
+- The root EBS volume must be encrypted
+
+Use cases:
+- Long-running processing
+- Saving the RAM state
+- Services that take time to initialize
