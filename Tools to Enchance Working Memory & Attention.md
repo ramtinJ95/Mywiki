@@ -31,5 +31,9 @@ attention and working memory.
 2) Cold showers or cold water plunge preferably.
 3) bi-neural beats dont increase dopamine but has been shown to increase the
    performance of working memory.
-4) supplements: L-tyrosine 0.5g - 1,5g recommend dose, Mucuna Pruriens.
-5)  
+4) supplements: L-tyrosine 0.5g - 1,5g recommend dose, Mucuna Pruriens. If going
+   down this path of introducing more dopamine through pharmacology then know
+   that people that have done this report experiencing a drop in alertness and
+   general mood 3-4 hours after ingesting these doses of dopamine. This is why
+   the behavioural therapies are prefered because they increase dopamine slower
+   and it tapers of much slower and has longer lasting effects. 
