@@ -102,11 +102,46 @@ Use cases:
 ## EC2 Instance Storage Section
 
 #### EBS
+An EBS Volume has the following characteristics:
+- It's a network drive, i.e not a physical drive
+  - It uses the network to communicate with the instance, which means there
+    might be a bit of latency.
+  - It can be detached from an EC2 instance and attached to another one quickly.
+
+- It's locked to an AZ
+  - An EBS Volume in us-east-1a cannot be attached to us-east-1b
+  - To move a volume across, you first need to snapshot it
+
+- Have provisioned capacity ( size in GB's and IOPS)
+  - You get billed for all the provisioned capacity
+  - You can increase the capacity of the drive over time.
+
+__EBS Snapshots__
+- Make a backup of your EBS volume at a point in time
+- Not necessarry to detach volume to do the snapshot, but recommended
+- Can copy snapshots across AZ or Region.
+- EBS snapshot archive
+  - Move a snapshot to an " archive tier " that is 75% cheaper 
+  - Takes within 24 to 72 hours for restoring the archive
+- Recycle Bin for EBS snapshots
+  - Setup rules to retain deleted snapshots so you can recover them after an
+    accidental deletion
+  - Specify retention (from 1 day to 1 year )
+- Fast snapshot restore (FSR)
+  - Force full initialization of snapshot to have no latency on the first use,
+    but this is super expensive and should only be used when we have a huge EBS
+    with important data that needs to be spun up fast.
 
 
-#### AMI
-
-
+#### Amazon Machine Image (AMI)
+- AMI is a customization of an EC2 instance
+  - You add your own software, configuration, operating system, monitoring etc
+  - Faster boot/configuration time because all your software is pre-packaged
+- AMI are built for a specific region (and can be copied across regions)
+- You can launch EC2 instances from:
+  - A public AMI: AWS provided
+  - Your own AMI: you make and maintain them yourself
+  - an AWS Marketplace AMI: an AMI someone else made and potentially sells.
 #### EFS
 
 
