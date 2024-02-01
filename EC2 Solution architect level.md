@@ -11,7 +11,7 @@ types of solutions and the use of Elastic IPs should be avoided if possible.
 Instead one should use a random public IP and register a DNS name to it, or use
 a load balances and dont use a public IP.
 
-## EC2 placement groups
+### EC2 placement groups
 Sometimes we need more control over the EC2 instance placement strategy, in
 those cases we can use placement groups. When we create a placement group, we
 can specify one of the following strategies for the group:
@@ -22,7 +22,7 @@ can specify one of the following strategies for the group:
   these paritions rely on different sets of racks. Scales to 100s of EC2
   instances per group.
 
-#### Cluster
+### Cluster
 For this option all the EC2 instances will be on the same rack, i.e the same
 hardware in the same AZ. We would choose this type of setup if we need super
 high speeds between our instances since in this configuration there is a 10Gbps
@@ -34,7 +34,7 @@ experiences problems then our entire group will go down. Having said this there
 is no more performant setup than this so it should be used for use cases that
 need such low latency between the instances.
 
-#### Spread
+### Spread
 This is the opposite of the Cluster strategy. Here each EC2 instance is on a
 seperate rack and we can have instances in different AZ's. This is a super
 realiable option since our instances are on different physical hardware spread
@@ -47,7 +47,7 @@ designed for that use case.
 So this is great for applications that need max availability and critical
 application where each instance much be isolated from failure from each other.
 
-#### Partition
+### Partition
 In the Partition strategy we spread our EC2 instances among different
 partitions. Each partition lives on different racks, i.e partition 1 and 2 are
 on different hardware racks and thus are isolated from rack failures between
@@ -63,7 +63,7 @@ EC2 instances get access to the partition information as metadata service.
 This is mostly used for partition aware big data applications such as Kafka,
 hadoop and Cassandra. 
 
-## Elastic Network Interfaces (ENI)
+### Elastic Network Interfaces (ENI)
 Logical component in a VPC that represents a virtual network card. The ENI can
 have the following attributes:
 - Primary private IPv4, one or more secondary IPv4
@@ -77,7 +77,7 @@ instances for failover. These ENI are bound to a specific AZ.
 
 for more detailed information read: https://aws.amazon.com/blogs/aws/new-elastic-network-interfaces-in-the-virtual-private-cloud/
 
-## EC2 Hibernate
+### EC2 Hibernate
 So in the normal case we working with EC2 instances we know we can stop and
 terminate instances. Stopping an instance, then the data on disk when using EBS
 ( Elastic Block Storage) is kept intact in the next start. Terminating an
@@ -101,7 +101,7 @@ Use cases:
 
 ## EC2 Instance Storage Section
 
-#### EBS
+### EBS
 An EBS Volume has the following characteristics:
 - It's a network drive, i.e not a physical drive
   - It uses the network to communicate with the instance, which means there
@@ -188,7 +188,7 @@ __EBS Multi-attach - io1/io2 family__
 - Up to 16 EC2 instances at a time max.
 - Must use a file system that is cluster aware (i.e not XFS, EXT4 etc) 
 
-##### EBS Encryption
+### EBS Encryption
 - When you create an encrypted EBS volume, you get the following:
   - Data at rest is encrypted inside the volume
   - All the data in flight moving between the instance and the volume is
@@ -208,7 +208,7 @@ To encrypt an unencrypted EBS volume you would do the following:
   we know)
 - Now you can attach the encrypted volume to the original instance
 
-#### EC2 Instance Store
+### EC2 Instance Store
 EBS volumes are network drives with good but "limited" perfomance. If you need a
 high-performance hardware disk, use EC2 Instance store instead.
 
@@ -220,7 +220,7 @@ high-performance hardware disk, use EC2 Instance store instead.
   attached to the hardware which the EC2 instance is running on
 - Backups and Replication is your responsibility.
 
-#### Amazon Machine Image (AMI)
+### Amazon Machine Image (AMI)
 - AMI is a customization of an EC2 instance
   - You add your own software, configuration, operating system, monitoring etc
   - Faster boot/configuration time because all your software is pre-packaged
@@ -230,7 +230,7 @@ high-performance hardware disk, use EC2 Instance store instead.
   - Your own AMI: you make and maintain them yourself
   - an AWS Marketplace AMI: an AMI someone else made and potentially sells.
 
-#### EFS
+### EFS
 - EFS is a managed NFS (network file system) that can be mounted on many EC2
   instances
 - EFS works with EC2 instances in multi-AZ
@@ -273,6 +273,3 @@ EFS - Storage classes
   - One Zone: One AZ, great for dev, backup enabled by default, compatible with
     IA (EFS one zone-IA)
 - Over 90% in cost savings.
-
-
-#### General discussion around EFS and EBS
