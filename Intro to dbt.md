@@ -24,5 +24,7 @@
 
 ## Excersises / Follow along section
 
+
+
 ### Presentation code snippets
 - [Slides](Slides)
