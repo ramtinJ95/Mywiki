@@ -23,7 +23,8 @@
   - macros
 
 ## Excersises / Follow along section
-
+[lab code](lab code)
+[jinja fundamentals](jinja fundamentals)
 
 
 ### Presentation code snippets
