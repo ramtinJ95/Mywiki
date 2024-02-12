@@ -26,7 +26,7 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Certification studies
 - [AWS](AWS)
 - GCP
-- Snowflake
+- [Snowflake](Snowflake)
 - Azure
 
 ## General Software development 
