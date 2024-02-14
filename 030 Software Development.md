@@ -36,10 +36,14 @@ Here all the notes around topics and learnings around SWE will have their root
 - [General SWE algo interview prep](General SWE algo interview prep)
 
 
+## DevOps
+- [Ansible](Ansible)
+- [Chezmoi](Chezmoi)
+
 ## My presentitions
 - [Intro to dbt](Intro to dbt)
 
 ---
 Status: :🗺️:
-tags: [[030 Software Development.md]]
+tags: [[030 Software Development.Md]]
 date: Tue 21 Feb 2023 17:18:39 CET
