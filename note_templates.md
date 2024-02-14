@@ -1,8 +1,8 @@
 Note Templates
-
 ## Standard Note
 
 ---
 Status:
 tags:
-date: 'use the shortcut leader-da'
+date: 'use :r!date to get the date and time' 
+
