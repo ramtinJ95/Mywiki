@@ -22,6 +22,8 @@
   - documentation
   - macros
 
+presentation> https://docs.google.com/presentation/d/1Lg_K2dksLt72HTuTdnDxXQaLWpMh4GS-BBMBJUXGV6s/edit
+
 ## Excersises / Follow along section
 [lab code](lab code)
 [jinja fundamentals](jinja fundamentals)
