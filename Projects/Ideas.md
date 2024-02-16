@@ -34,8 +34,6 @@ https://blog.langchain.dev/llms-and-sql/
 https://www.patterns.app/blog/2023/01/18/crunchbot-sql-analyst-gpt/?ref=blog.langchain.dev
 https://github.com/patterns-app/patterns-components/tree/master/patterns_templates/Featured%20and%20Starter/Crunchbot this is the code for the blogpost above it.
 
-
-
 From this point and down the materials are not strictly related to generating
 sql from natural language, and sending it as a query against db/dw but they are
 more focused on feeding a llm with documentation like guru etc. 
