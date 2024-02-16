@@ -5,4 +5,4 @@ Snowflake is divided into 6 domains
 - Perfomance Concepts
 - Data Loading and Unloading
 - Data Transformations
-- Data Protection and Data Sharing
+- [Data Protection and Data Sharing](Data Protection and Data Sharing)
