@@ -5,3 +5,7 @@
 ### Snowflake Service Layers
 
 ### Clustering and Micro partitions
+
+### Views
+
+### Table
