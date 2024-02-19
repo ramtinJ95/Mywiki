@@ -18,6 +18,18 @@ data storage across your entire account:
 - Using Classic Web Interface: Click on Account > Billing & Usage > Average 
 Storage Used
 
+Snowsight is the new Snowflake Web Interface. It can be used to perform the following operations:
+
+- Building and running queries.
+- Loading data into tables.
+- Monitoring query performance and copy history.
+- Creating and managing users and other account-level objects.
+- Creating and using virtual warehouses.
+- Creating and modifying databases and all database objects.
+- Sharing data with other Snowflake accounts.
+- Exploring and using the Snowflake Marketplace.  
+- One of the cool features is the smart autocomplete, which suggests SQL or object syntax to insert
+
 ### Snowflake Service Layers
 
 - The search optimization service sppeds up Equality and IN predicates
