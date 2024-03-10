@@ -1,4 +1,13 @@
 ### Roles
+Users with the ACCOUNTADMIN role can view the billing for Automatic Clustering 
+using Snowsight, the classic web interface, or SQL: 
+- Snowsight: Select Admin » Usage. 
+- Classic Web Interface: Click on Account tab » Billing & Usage The billing for
+Automatic Clustering shows up as a separate Snowflake-provided warehouse named 
+AUTOMATIC_CLUSTERING. 
+- SQL:Query either of the following: AUTOMATIC_CLUSTERING_HISTORY table 
+function (in the Snowflake Information Schema). AUTOMATIC_CLUSTERING_HISTORY
+View (in Account Usage).
 
 ### Interface / Snowsight
 
@@ -32,8 +41,8 @@ Snowsight is the new Snowflake Web Interface. It can be used to perform the foll
 
 ### Snowflake Service Layers
 
-- The search optimization service sppeds up Equality and IN predicates
-serarches. Futhermore the following are the only datatypes that search
+- The search optimization service speeds up Equality and IN predicates
+searches. Futhermore the following are the only datatypes that search
 optimization supports: Fixed-point numbers (e.g. INTEGER, NUMERIC). 
 DATE, TIME, and TIMESTAMP. VARCHAR. BINARY.
 
@@ -161,7 +170,6 @@ privileges to delete all data from a specific table.
 At the time that the stored procedure is created, the creator specifies whether the
 procedure runs with the owner’s rights or the caller’s rights. The default is 
 owner’s rights.
-
 
 __Zero-Copy cloning__:Zero-copy cloning allows us to make a snapshot of any table, 
 schema, or database without actually copying data. A clone is writable and is 
