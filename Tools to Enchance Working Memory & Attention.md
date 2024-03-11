@@ -37,3 +37,9 @@ attention and working memory.
    general mood 3-4 hours after ingesting these doses of dopamine. This is why
    the behavioural therapies are prefered because they increase dopamine slower
    and it tapers of much slower and has longer lasting effects. 
+   
+
+---
+Status: :🏛:  
+tags: [[040 Science]] - [[Health & Fitness]] - [[Huberman-podcast]] 
+date:2024-02-12
