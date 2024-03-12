@@ -59,8 +59,30 @@ information about a task not in the top 3 they can just append it to that point
 in the list so no information is ever lost, but we only have to care about the
 top 3 things until one of them is done. Fucking beautiful way of working.
 
+Tool 6 multi scale planning. Planning on 3 different scales, daily weekly
+quartly. So have a big plan for the quarter like what objectives you want to hit
+have some reminders to yourself about what matters. Then every week you look at
+your quartly plan and think what in my quartly plan can i make progress on this
+week given the reality of this weeks schedule. Also the weekly plan is the
+planning that you actually look at the calendar and can move stuff around
+weekly. At the daily planning level you do time blocking, where you basically
+block in the time you have during a day and then decide what you will be doing
+within those blocks. And what to do in each block is then informed by your
+weekly plan.
 
-
+Tool 7 shutdown ritual. You have to close all loops, think of it as a review
+period, look at your inbox, look at your plan and your calendar. Make sure there
+is nothing urgent that did not get dealt with and that there is nothing that is
+just in your head that you dont want to forget but its not written down
+somewhere. Build up a sense of what you are going to do tomorrow, note that you
+dont have to do the entire daily planning for tomorrow here but get a sense for
+what it is that you are going to do tomorrow. Come up with a phrase or an action
+that you say or do or write down that indicates the end of the work day. Once
+this particular thing is done then no more effort or thought should be dedicated
+to work, and any thoughts during the evening that comes up regarding work you
+should just say to yourself that you did the thing and you would not have done
+that thing if you did not already think through everything etc. This is a
+cognitive behavioural therapy way of making yourself leave work at work etc. 
 
 
 ---
