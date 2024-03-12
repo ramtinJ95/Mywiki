@@ -1,6 +1,8 @@
 My master document for which tools and frameworks im using to manage my
 productivity.
 
+[Core Values Document](Core Values Document)
+
 __Obligaton/status list (NOT a todo list):__
 Anything that I have commited to do so that I do not forget. This is not a task
 list so no actual tasks need to go here. Also the second column so to speak of
@@ -10,15 +12,18 @@ any new info regarding an obligation pops up or status changes etc then it can
 just be added to that item in the list. Trello sounds like a perfect tool for
 this where columns are statuses and the cards are the items on the list.
 
+Link to trello for this: https://trello.com/b/1SXXqMBC/my-trello-board
+
 __Multi scale planning:__
-Quarterly plans
-Weekly plans
+[Annual plans](Annual plans)
+[Quarterly plans](Quarterly plans)
+[Weekly plans](Weekly plans)
 daily plan should be analog notebook, in my case remarkable will be perfect.
 
 __Pull based workflow:__
 For each day create a list of things where the top 3 are the things that im
 actively working on. Anything else should be added to the bottom of the list and
-once one item in the top 3 is done then the next thing in the queue gets moved
+once one itm in the top 3 is done then the next thing in the queue gets moved
 up. So we pull stuff into our window of 3 things that we are going to work on. 
 
 __Shutdown ritual:__
@@ -40,17 +45,16 @@ that block is, if its coding then its coding, if it is communicating on slack
 then that is that. If it is a coding block you should not be looking at slack or
 email etc because that is for the communication block. 
 
-
-## Learning
-use [Anki](Anki) for spaced repetition
-use active recall, that is to read something like a chapter etc and then try to
+__Learning:__ 
+* use [Anki](Anki) for spaced repetition
+* use active recall, that is to read something like a chapter etc and then try to
 write down what I remember and build up the knowledge i just gained from scratch
 without looking at the book as if im going to give a lecture on it.
-use a pen and notebook always when reading. Active reading is where actual
+* use a pen and notebook always when reading. Active reading is where actual
 learning and digestion of the content of a book happens.
 
 
 ---
 Status: :🌳:
-tags: [[010 Productivity]] - [[Anki]] 
+tags: [[010 Productivity]]
 date: 2024-03-12
