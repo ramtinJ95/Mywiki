@@ -14,7 +14,7 @@ View (in Account Usage).
 There are three interfaces in Snowsight. Left Nav, User Menu, and Account 
 Selector:
 
-- Left Navigation consists of Worksheets, Dashboards, Data, Marketplace,
+- Left Navigation consists of Worksheets, Dashboards, Data, ,
 Activity, Admin, Help & Support.
 - User Menu lets you Switch Role, Profile including multi-factor authentication
 (MFA) , Partner Connect, Documentation, Support and Sign Out.
@@ -60,7 +60,35 @@ the schedule interval is critical.
   sharing. Share internally with private data exchange or externally with public
   data exchange.
 
-##### Time travel
+### Snowflake stage
+An internal stage is a cloud repository that resides within a Snowflake account
+and is managed by Snowflake. An external stage is a pointer to a cloud file 
+repository outside a Snowflake account, which the customer manages independently. 
+There are three types of stages, and they are table stage, user stage, and 
+named stage. Table Stage: When you create a table, the system will create a 
+table stage with the same name but with the prefix @%. User Stage: A user stage
+is created whenever you create a new user in Snowflake. The user stage uses the
+@~. Named Stage: Named stages are created manually. They can be internal or 
+external and are prefixed with an @ and then the stage's name.
+
+__User Stage:__ User stages cannot be altered or dropped. A user stage is 
+allocated to each user for storing files. This stage type is designed to store 
+staged and managed files by a single user but can be loaded into multiple tables.   
+
+__Table Stage:__ Table stages cannot be altered or dropped. A table stage is 
+available for each table created in Snowflake. This stage type is designed to 
+store staged and managed files by one or more users but only loaded into a 
+single table. Note that a table stage is not a separate database object but an 
+implicit stage tied to the table itself. A table stage has no grantable 
+privileges of its own.   
+
+__Named Stage:__ A named internal stage is a database object created in a schema. 
+This stage type can store files staged and managed by one or more users and 
+loaded into one or more tables. Because named stages are database objects, the 
+ability to create, modify, use, or drop them can be controlled using security 
+access control privileges.
+
+### Time travel
 
 Snowflake Time Travel enables accessing historical data (i.e. data that has 
 been changed or deleted) at any point within a defined period. It serves 
@@ -75,6 +103,13 @@ Using Time Travel, you can perform the following actions within a defined period
 - Query data in the past that has since been updated or deleted.
 - Create clones of entire tables, schemas, and databases at or before specific points in the past.     
 - Restore tables, schemas, and databases that have been dropped.
+
+### Fail-safe
+Fail-safe is not provided as a means for accessing historical data after the 
+Time Travel retention period has ended. It is for use only by Snowflake to 
+recover data that may have been lost or damaged due to extreme operational 
+failures. Data recovery through Fail-safe may take from several hours to 
+several days to complete.
 
 ### Clustering
 
@@ -142,7 +177,50 @@ secure views.
 
 ### Table
 Insert-only stream type for streams on the external table.
+Adding a stream to a table appends three metadata column: METADATA$ACTION, METADATA$ISUPDATE, 
+METADATA$ROW_ID.  These columns track the CDC records and their type:  appends,  deletes, 
+or both (updates = inserts + deletes).
+METADATA$ACTION - Indicates the DML operation (INSERT, DELETE) recorded.
 
+METADATA$ISUPDATE - Indicates whether the operation was part of an UPDATE statement.
+
+METADATA$ROW_ID - Specifies the unique and immutable ID for the row, which can 
+be used to track changes to specific rows over time.
+
+__Snowflake supports four different table types: Permanent Table, Temporary Table,
+Transient Table, and External Table:__ 
+
+__Permanent Table:__ It persists until dropped. It is designed for data requiring 
+the highest data protection and recovery level and is the default table type. 
+Permanent Tables can be protected by up to 90 days of time travel with 
+Enterprise Edition or above. Moreover, the failsafe is covered on all the 
+Permanent Tables.
+
+__Temporary Table:__ A Temporary table is tied to a specific session, which means 
+it is tied to a single user. Temporary tables are used for things like materializing 
+subquery. You can only cover temporary tables by up to one day of time travel, 
+and they are not covered by a failsafe.     
+
+__Transient Table:__ A Transient table is essentially a temporary table that more 
+than one user can share because multiple users share a transient table. You 
+have to drop it when you are finished with it, and it also is only covered by 
+up to one day of time travel and is not covered by a failsafe. NOTE - WE CAN 
+ALSO HAVE TRANSIENT DATABASES AND SCHEMAS.     
+
+__External Table:__ An External Table is used to access data in a data lake. It is 
+always read-only because it is based on files that live outside of Snowflake 
+and are not managed by Snowflake, and Time Travel and Failsafe do not cover it.
+
+### Snowflake connectors
+There are three available connectors for snowflake; Python, Spark and Kafka.
+
+__kafka connector__:
+* Kafka topics can be mapped to existing Snowflake tables in the Kafka 
+configuration. If the topics are not mapped, then the Kafka connector creates a
+new table for each topic using the topic name. The Kafka connector subscribes 
+to one or more Kafka topics based on the configuration information provided via
+the Kafka configuration file or command line (Or the Confluent Control Center;
+Confluent only).
 
 ### Good to know
 standard retatation period is 1 day and auto enabled for all snowflake accounts.
@@ -152,7 +230,8 @@ For snowflake Enterprise Edition
 to 0 (or unset back to the default of 1 day). The same is also true for temporary tables.
 - For permanent databases, schemas, and tables, the retention period can be set to
 any value from 0 up to 90 days.
-
+- Snowflake keeps the Snowpipe's load history for 14 days. [Note / Important for exam]: 
+If you recreate the PIPE then the load history will reset to empty.
 
 __Stored Procedure__: A stored procedure runs with either the caller’s rights or 
 the owner’s rights. It cannot run with both at the same time. A caller’s rights 
@@ -179,3 +258,4 @@ table's micro partitions, using no data storage. If we make any changes in the
 cloned table, then only its changed micro partitions are written to storage.
 
 TODO figure out meaning of staging in snowflake.
+__File staging commands__: Put(to a stage), Get(from a stage), List and Remove.

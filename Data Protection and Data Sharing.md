@@ -1,5 +1,13 @@
 ### Time travel
+Snowflake Time Travel enables accessing historical data (i.e. data that has 
+been changed or deleted) at any point within a defined period. It serves as a 
+powerful tool for performing the following tasks: 
 
+Restoring data-related objects (tables, schemas, and databases) that might have been accidentally or intentionally deleted.
+
+Duplicating and backing up data from key points in the past.
+
+Analyzing data usage/manipulation over specified periods of time.
 ### Fail-safe
 
 ### Retention times and polices
