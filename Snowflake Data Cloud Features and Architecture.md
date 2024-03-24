@@ -111,6 +111,17 @@ recover data that may have been lost or damaged due to extreme operational
 failures. Data recovery through Fail-safe may take from several hours to 
 several days to complete.
 
+Decreasing Retention reduces the amount of time data is retained in Time Travel:
+For active data modified after the retention period is reduced, the new shorter period applies.
+For data that is currently in Time Travel:     
+If the data is still within the new shorter period, it remains in Time Travel.     
+If the data is outside the new period, it moves into Fail-safe. 
+For example, if you have a table with a 30-day retention period and you decrease the period to 
+20-day, data from days 21 to 30 will be moved into Fail-safe, leaving only the data from day 
+1 to 20 accessible through Time Travel. 
+
+However, the process of moving the data from Time Travel into Fail-safe is performed by a background process, so the change is not immediately visible. Snowflake guarantees that the data will be moved, but does not specify when the process will complete; until the background process completes, the data is still accessible through Time Travel.
+
 ### Clustering
 
 In general for clutering of tables these are some good rules to keep in mind:

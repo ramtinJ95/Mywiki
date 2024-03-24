@@ -27,6 +27,24 @@ share or forward it. And also, time travel data on a share is not available to
 the consumer. A share can be imported into one database. This is super important
 for the exam. 
 
+Snowflake data providers can share data that resides in different databases by 
+using secure views. A secure view can reference objects such as schemas, tables,
+and other views from one or more databases, as long as these databases 
+belong to the same account.
+
+### Shares
+Shares are named Snowflake objects that encapsulate all of the information 
+required to share a database. Each share consists of:
+The privileges that grant access to the database(s) and the schema containing the objects to share.
+The privileges that grant access to the specific objects in the database.
+The consumer accounts with which the database and its objects are shared. 
+
+Example:
+CREATE SHARE "SHARED_DATA" COMMENT='';
+GRANT USAGE ON DATABASE "DEMO_DB" TO SHARE "SHARED_DATA";
+GRANT USAGE ON SCHEMA "DEMO_DB"."TWITTER_DATA" TO SHARE "SHARED_DATA";
+GRANT SELECT ON VIEW "DEMO_DB"."TWITTER_DATA"."FOLLOWERS" TO SHARE "SHARED_DATA";
+
 ##### Snowflake Secure Data sharing feature
 Secure Data Sharing enables sharing selected objects in a database in your 
 account with other Snowflake accounts. The following Snowflake database objects
