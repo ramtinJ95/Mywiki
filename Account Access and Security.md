@@ -3,9 +3,7 @@ By default, Snowflake allows users to connect to the service from any computer o
 device IP address. A security administrator (or higher) can create a network 
 policy to allow or deny access to a single IP address or a list of addresses
 
-
 Network policies currently support only Internet Protocol version 4 (i.e. IPv4) addresses.
-
 
 ### Access
 MODIFY - Enables altering any properties of a warehouse, including changing its 
@@ -29,6 +27,16 @@ this privilege on a specific object at a time.
 
 ALL [ PRIVILEGES ] - Grants all privileges, except OWNERSHIP, on the warehouse.
 
+Access History in Snowflake refers to when the user query reads column data and 
+when the SQL statement performs a data write operation, such as INSERT, UPDATE, 
+and DELETE, along with variations of the COPY command, from the source data 
+object to the target data object. The user access history can be found by 
+querying the Account Usage ACCESS_HISTORY view.
+
+To view the current set of privileges granted on an object, you can execute the 
+SHOW GRANTS command. To view the current permissions on a schema, execute the 
+following command: SHOW GRANTS ON SCHEMA  <database_name>.<schema_name>;
+
 ### User/Roles
 A user's default role is the role a user gets set to each time the user logs in 
 to Snowflake. Snowflake uses roles to control the objects (virtual warehouses, 
@@ -47,6 +55,13 @@ time.
 
 Roles can be assigned at user creation or afterward.
 
+The SHOW PARAMETERS command determines whether a network policy is set on the account or for a specific user.
+- For Account level: SHOW PARAMETERS LIKE 'network_policy' IN ACCOUNT;
+
+- For User level: SHOW PARAMETERS LIKE 'network_policy' IN USER <username>; 
+
+- Example - SHOW PARAMETERS LIKE 'network_policy' IN USER john;
+
 
 #### Data Security
 ExplanationDynamic Data Masking is a Column-level Security feature that uses 
@@ -57,6 +72,9 @@ External Tokenization enables accounts to tokenize data before loading it into
 Snowflake and detokenize the data at query runtime. Tokenization is the process 
 of removing sensitive data by replacing it with an undecipherable token. 
 External Tokenization makes use of masking policies with external functions.
+
+Active Key is used for both encryption and decryption.  The retired Key is used 
+for decryption only.  The destroyed Key is no longer used.
 
 ### Platform security
 Snowflake is a highly secured platform and provides multi-level security like 
