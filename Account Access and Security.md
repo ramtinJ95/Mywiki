@@ -84,5 +84,3 @@ Tri Secret Secure, and so on. Tri-Secret Secure is the combination of a
 Snowflake-maintained key and a customer-managed key in the cloud provider 
 platform that hosts your Snowflake account to create a composite master key to 
 protect your Snowflake data.
-
-test text to test gc workflow
