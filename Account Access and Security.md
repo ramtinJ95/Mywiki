@@ -97,7 +97,7 @@ The SHOW PARAMETERS command determines whether a network policy is set on the ac
 
 
 #### Data Security
-ExplanationDynamic Data Masking is a Column-level Security feature that uses 
+Dynamic Data Masking is a Column-level Security feature that uses 
 masking policies to selectively mask plain-text data in table and view columns 
 at query time. 
 
@@ -139,8 +139,8 @@ the warehouse. If the warehouse is configured to auto-resume when a SQL
 statement (e.g. query) is submitted to it, the warehouse resumes automatically 
 and executes the statement. 
 
-MODIFY:  Enables altering any properties of a warehouse, including changing its 
-size.   Required assigning a warehouse to a resource monitor. Note that only 
+MODIFY: Enables altering any properties of a warehouse, including changing its 
+size. Required assigning a warehouse to a resource monitor. Note that only 
 the ACCOUNTADMIN role can assign warehouses to resource monitors. 
 
 MONITOR: Enables viewing of current and past queries executed on a warehouse as 
@@ -151,4 +151,4 @@ resume). In addition, enables viewing current and past queries executed on a
 warehouse and aborting any executing queries. 
 
 OWNERSHIP: Grants full control over a warehouse. Only a single role can hold 
-	this privilege on a specific object at a time.
+this privilege on a specific object at a time.
