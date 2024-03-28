@@ -17,6 +17,23 @@ not scanned if a query only filters by one column. The closer the ratio of
 scanned micro-partitions and columnar data is to the ratio of actual data 
 selected, the more efficient is the pruning performed on the table
 
+Snowflake has three types of cache:
+
+- The metadata cache that lives in the cloud services layer. 
+
+- The data cache/local disk cache that lives on the SSD drives in the virtual 
+warehouses 
+
+- The query result cache. If a result is small, it will be stored in the cloud 
+services layer, but larger results are going to be stored in the storage
+layer.
+
+Results are retained for 24 hours in Query Result Cache. Snowflake resets the 
+24-hour retention period for the result, up to a maximum of 31 days from the 
+date and time that the query was first executed. After 31 days, the result is 
+purged and the next time the query is submitted, a new result is generated and 
+persisted.
+
 ### Warehouse Scaling
 In Standard Scaling policy, the first cluster starts immediately when either a 
 query is queued, or the system detects that there’s one more query than the 
@@ -75,6 +92,10 @@ warehouse to maximize local disk cache reuse for performance and cost
 optimization. The results get stored in the SSD of Virtual Warehouse. So, if 
 the Virtual Warehouse gets suspended, then results get lost.
 
+Please note, not all predicate expressions can be used to prune. Snowflake does 
+not prune micro-partitions based on a predicate with a subquery, even if the 
+subquery results in a constant.
+
 ### Materializations
 Materialized views are particularly useful when: - Query results contain a 
 small number of rows and/or columns relative to the base table (the table on 
@@ -84,3 +105,19 @@ that take a long time to calculate. - The query is on an external table (i.e.,
 data sets stored in files in an external stage), which might have a slower 
 performance compared to querying native database tables. - The view’s base 
 table does not change frequently.
+
+Materialized views are designed to improve query performance for workloads 
+composed of common, repeated query patterns. However, materializing 
+intermediate results incur additional costs. As such, before creating any 
+materialized views, you should consider whether the costs are offset by the 
+savings from re-using these results frequently enough.
+
+
+### Good to know
+Snowflake does not begin executing SQL statements submitted to a warehouse 
+until all of the compute resources for the warehouse are successfully 
+provisioned, unless any of the resources fail to provision: If any of the 
+compute resources for the warehouse fail to provision during start-up, 
+Snowflake attempts to repair the failed resources. During the repair process, 
+the warehouse starts processing SQL statements once 50% or more of the 
+requested compute resources are successfully provisioned.

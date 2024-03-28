@@ -11,6 +11,24 @@ in order to block all IP addresses except a select list, you only need to add
 IP addresses to ALLOWED_IP_LIST. Snowflake automatically blocks all IP 
 addresses not included in the allowed list.
 
+Only a single network policy can be activated for each user at a time; however, 
+different network policies can be activated for different users for granular 
+control. Associating a network policy with a user automatically removes the 
+currently-associated network policy (if any)
+
+The "Policy Name" is the only required parameter because it serves as the 
+unique identifier for the network policy within your Snowflake account. This 
+name is essential for creating, managing, and referencing the network policy 
+within Snowflake. 
+
+Other parameters, such as "Allowed IP Addresses" (ALLOWED_IP_LIST), "Blocked IP 
+Addresses" (BLOCKED_IP_LIST), and "Comment," are optional. These parameters 
+allow for further customization of the network policy but are not mandatory for 
+the policy's creation. The flexibility in specifying allowed and blocked IP 
+addresses enables administrators to tailor network access controls according to 
+their security requirements, but the policy can be created with just a name and 
+detailed configurations can be added or adjusted later
+
 ### Access
 MODIFY - Enables altering any properties of a warehouse, including changing its 
 size. Required to assign a warehouse to a resource monitor. Note that only the 
@@ -38,6 +56,15 @@ when the SQL statement performs a data write operation, such as INSERT, UPDATE,
 and DELETE, along with variations of the COPY command, from the source data 
 object to the target data object. The user access history can be found by 
 querying the Account Usage ACCESS_HISTORY view.
+
+Snowflake’s approach to access control combines aspects from both of the 
+following models: 
+
+- Discretionary Access Control (DAC): Each object has an owner, who can in turn 
+grant access to that object. 
+
+- Role-based Access Control (RBAC): Access privileges are assigned to roles, 
+which are in turn assigned to users.
 
 To view the current set of privileges granted on an object, you can execute the 
 SHOW GRANTS command. To view the current permissions on a schema, execute the 
@@ -85,6 +112,12 @@ for decryption only.  The destroyed Key is no longer used.
 Snowflake supports Role-Based Access control. Permissions on database objects 
 such as databases or tables are granted to Roles.
 
+A row access policy uses Conditional Expression Functions and Context Functions 
+to determine which rows should be visible in a given context. Context Functions 
+such as CURRENT_USER(), CURRENT_ROLE(), and CURRENT_ACCOUNT(), which act as 
+dynamic filters and are commonly used with secure views to limit row access in 
+a table.
+
 ### Platform security
 Snowflake is a highly secured platform and provides multi-level security like 
 Multi-Factor Authentication (MFA), provision to set up Network policy to block 
@@ -98,3 +131,24 @@ protect your Snowflake data.
 Snowflake Query history page allows you to view the details of all the queries 
 executed in the last 14 days. You can query the Query_History view in 
 Snowflake's Account Usage schema for older queries.
+
+**Virtual Warehouse Privileges:**
+
+USAGE: Enables using a virtual warehouse and, as a result, executing queries on 
+the warehouse. If the warehouse is configured to auto-resume when a SQL 
+statement (e.g. query) is submitted to it, the warehouse resumes automatically 
+and executes the statement. 
+
+MODIFY:  Enables altering any properties of a warehouse, including changing its 
+size.   Required assigning a warehouse to a resource monitor. Note that only 
+the ACCOUNTADMIN role can assign warehouses to resource monitors. 
+
+MONITOR: Enables viewing of current and past queries executed on a warehouse as 
+well as usage statistics on that warehouse. 
+
+OPERATE: Enables changing the state of a warehouse (stop, start, suspend, 
+resume). In addition, enables viewing current and past queries executed on a 
+warehouse and aborting any executing queries. 
+
+OWNERSHIP: Grants full control over a warehouse. Only a single role can hold 
+	this privilege on a specific object at a time.
