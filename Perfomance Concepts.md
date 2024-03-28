@@ -31,6 +31,13 @@ statements to continue until the statements are complete. At this time, the
 resources are shut down, and the warehouse status changes to “Suspended”. 
 Compute resources waiting to shut down are considered to be in “quiesce” mode.
 
+Until data has not changed and the query is the same - Snowflake reuses the 
+data from the cache. Please note,  Each time the persisted result for a query 
+is reused, Snowflake resets the 24-hour retention period for the result up to a 
+maximum of 31 days from the date and time that the query was first executed. 
+After 31 days, the result is purged, and the next time the query is submitted, 
+a new result is generated and persisted.
+
 #### Query Performance
 When Snowflake warehouse cannot fit an operation in memory, it starts spilling (
 storing) data first to the local disk of a warehouse node and then to remote 
@@ -55,6 +62,18 @@ the CTEs with temporary tables).
 
 - Using a larger warehouse - effectively means more memory and more local disk 
 space.
+
+If a node has insufficient memory to complete its portion of a query, it will 
+"spill" to local SSD storage. This can negatively impact performance but is 
+sometimes acceptable. If a node has insufficient local SSD storage to complete 
+its portion of a query, it will "spill" to remote cloud storage. This is almost 
+always very bad for performance. The solution, in either case, is to simplify 
+the SQL query or increase the warehouse size.
+
+As a best practice, Group and Execute similar queries on the same virtual 
+warehouse to maximize local disk cache reuse for performance and cost 
+optimization. The results get stored in the SSD of Virtual Warehouse. So, if 
+the Virtual Warehouse gets suspended, then results get lost.
 
 ### Materializations
 Materialized views are particularly useful when: - Query results contain a 

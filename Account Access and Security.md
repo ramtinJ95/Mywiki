@@ -5,6 +5,12 @@ policy to allow or deny access to a single IP address or a list of addresses
 
 Network policies currently support only Internet Protocol version 4 (i.e. IPv4) addresses.
 
+If you provide both Allowed IP Addresses and Blocked IP Addresses, Snowflake 
+applies the Blocked List first. This would block your own access.Additionally, 
+in order to block all IP addresses except a select list, you only need to add 
+IP addresses to ALLOWED_IP_LIST. Snowflake automatically blocks all IP 
+addresses not included in the allowed list.
+
 ### Access
 MODIFY - Enables altering any properties of a warehouse, including changing its 
 size. Required to assign a warehouse to a resource monitor. Note that only the 
@@ -76,6 +82,9 @@ External Tokenization makes use of masking policies with external functions.
 Active Key is used for both encryption and decryption.  The retired Key is used 
 for decryption only.  The destroyed Key is no longer used.
 
+Snowflake supports Role-Based Access control. Permissions on database objects 
+such as databases or tables are granted to Roles.
+
 ### Platform security
 Snowflake is a highly secured platform and provides multi-level security like 
 Multi-Factor Authentication (MFA), provision to set up Network policy to block 
@@ -85,4 +94,7 @@ Snowflake-maintained key and a customer-managed key in the cloud provider
 platform that hosts your Snowflake account to create a composite master key to 
 protect your Snowflake data.
 
-test text to test gc workflow
+### good to know
+Snowflake Query history page allows you to view the details of all the queries 
+executed in the last 14 days. You can query the Query_History view in 
+Snowflake's Account Usage schema for older queries.
