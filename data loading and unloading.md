@@ -1,6 +1,3 @@
-### Commands
-
-
 ### Insert Performance
 Pattern matching using a regular expression is generally the slowest of the
 three options for identifying/specifying data files to load from a stage;

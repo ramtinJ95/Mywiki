@@ -143,7 +143,7 @@ expiration period of Pre-Signed URL: Length of time specified in the
 expiration_time argument.
 
 Only the user who generated the scoped URL can use the URL to access the
-referenced file. I case of File URL, any role that has sufficient privileges on
+referenced file. In case of File URL, any role that has sufficient privileges on
 the stage can access the file.
 
 An HTTP client that sends a URL (either scoped URL or file URL) to the 
