@@ -1,5 +1,16 @@
 ## This is the index over my Rust notes divided by topic and application area
 
+## Variables and Shadowing
+Shadowing is pretty much what rust calls type conversions. By reusing the same
+variable name but using the 'let' keyword we can have the same name for
+different data types that the variable holds:
+```rust
+let number = 2;
+let number = "3";
+```
+this would not have been possible if we had used the mut key word since that
+requires us to determine a type in advance and then the type of that variable is
+not allowed to change. This is great for type conversions.
 ## Conventions and general charachteristics of Rustlang
 - constants in code are in all caps seperated with underscore
   THIS_IS_WHAT_I_MEAN
