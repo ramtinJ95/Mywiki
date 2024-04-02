@@ -41,8 +41,6 @@ For example, if you have a table with a 30-day retention period and you decrease
 
 However, the process of moving the data from Time Travel into Fail-safe is performed by a background process, so the change is not immediately visible. Snowflake guarantees that the data will be moved, but does not specify when the process will complete; until the background process completes, the data is still accessible through Time Travel.
 
-### Retention times and polices
-
 ### Sharing of data
 There are three types of accounts involved in data sharing.
 - Data Providers: Share data with others
