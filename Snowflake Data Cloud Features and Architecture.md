@@ -116,10 +116,7 @@ tables, which can be comprised of millions, or even hundreds of millions, of
 micro-partitions. It enables extremely efficient DML and fine-grained pruning
 for faster queries
 
-
-TODO figure out clustering overlap depth meaning.
-
-### Views
+  ### Views
 
 Snowflake supports three types of views.
 Standard View, Secure View, and Materialized View.
@@ -234,5 +231,4 @@ reflected in the other object). A new clone of a table points to the original
 table's micro partitions, using no data storage. If we make any changes in the 
 cloned table, then only its changed micro partitions are written to storage.
 
-TODO figure out meaning of staging in snowflake.
 __File staging commands__: Put(to a stage), Get(from a stage), List and Remove.
