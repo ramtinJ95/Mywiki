@@ -139,7 +139,3 @@ the rows into a file.
 To unload data to a single output file (at the potential cost of decreased
 performance), specify the SINGLE = true copy option in your statement. You can
 optionally specify a name for the file in the path.
-
-### Unload Performance
-
-
