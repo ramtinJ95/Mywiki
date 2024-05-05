@@ -116,7 +116,7 @@ tables, which can be comprised of millions, or even hundreds of millions, of
 micro-partitions. It enables extremely efficient DML and fine-grained pruning
 for faster queries
 
-  ### Views
+### Views
 
 Snowflake supports three types of views.
 Standard View, Secure View, and Materialized View.
@@ -197,7 +197,7 @@ the Kafka configuration file or command line (Or the Confluent Control Center;
 Confluent only).
 
 ### Good to know
-standard retatation period is 1 day and auto enabled for all snowflake accounts.
+standard retention period is 1 day and auto enabled for all snowflake accounts.
 Snowflake keeps the batch load history for 64 days.
 For snowflake Enterprise Edition
 - For transient databases, schemas, and tables, the retention period can be set
