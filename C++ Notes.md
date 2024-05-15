@@ -6,4 +6,5 @@
 - [Move semantics](Move semantics)
 - [Smart Pointers](Smart Pointers)
 - [Header & Source file differences](Header & Source file differences)
+- [RAII](RAII)
 - [C++ Tooling](C++ Tooling)
