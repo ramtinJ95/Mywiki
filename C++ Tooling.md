@@ -12,6 +12,9 @@ few steps had to be taken.
 3) Run "make clean" then "bear -- make" and the json file will be generated. But
    note that the "-I" flag in step 2 has to be in the makefile compile command
    before doing step 3.
+4) If using CMake there is no need for bear on small hobby projects to get the
+   lsp to work. It is simply enough to just pass the
+   -DCMAKE_EXPORT_COMPILE_COMMANDS=ON flag when calling cmake. 
 
 ---
 Status: :🌱:
