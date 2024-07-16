@@ -14,3 +14,6 @@ Great series of artciles explaining memory allocation strategies: https://www.gi
 Great video explaining the reason and evolution of a programmer when it comes to
 these ideas: https://www.youtube.com/watch?v=xt1KNDmOYqA
 
+Great talk explaining Arena memory allocators:
+https://www.youtube.com/watch?v=nZNd5FjSquk (part 1)
+https://www.youtube.com/watch?v=CFzuFNSpycI (part 2)
