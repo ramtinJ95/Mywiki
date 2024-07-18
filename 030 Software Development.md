@@ -37,6 +37,7 @@ Here all the notes around topics and learnings around SWE will have their root
 - [General SWE algo interview prep](General SWE algo interview prep)
 - [Vim](Vim)
 - [Memory allocators](Memory allocators)
+- [Data Oriented Desging (DoD)](Data Oriented Desging (DoD))
 
 
 ## DevOps
