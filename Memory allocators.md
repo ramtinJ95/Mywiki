@@ -17,3 +17,6 @@ these ideas: https://www.youtube.com/watch?v=xt1KNDmOYqA
 Great talk explaining Arena memory allocators:
 https://www.youtube.com/watch?v=nZNd5FjSquk (part 1)
 https://www.youtube.com/watch?v=CFzuFNSpycI (part 2)
+
+A talk about how to write a custom memory allocator:
+https://www.youtube.com/watch?v=kSWfushlvB8&ab_channel=CppCon
