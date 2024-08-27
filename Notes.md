@@ -1,3 +1,3 @@
-- Crafting interpreters notes
+- [Crafting interpreters notes](Crafting interpreters notes)
 - Engineering a Compiler notes
 - Types and Programming Languges notes

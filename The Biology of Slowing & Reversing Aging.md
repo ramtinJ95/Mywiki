@@ -1,4 +1,3 @@
-
 # Slowing & Reversing Aging ## Important points Aging can be considered a
   disease.
 

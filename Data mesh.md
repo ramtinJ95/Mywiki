@@ -1,4 +1,3 @@
-
 ### Notes From The Book
 - Each domain becomes responsible for the data it is most familiar with. This is
   called the principle of domain ownership
