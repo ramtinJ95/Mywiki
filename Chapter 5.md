@@ -42,3 +42,19 @@ These symbols come in two kinds
 ## Dig deeper concepts for self study
 - Chomsky hierarchy
 
+## The Expression problem
+In an object oriented programming language it is easy to add new types, just
+create a new class and voila you have your type without having to add or change
+any existing code. Adding a new operation though is very difficult to do,
+because you would have to go into each type and change the code such that it can
+perform whatever the new operation is. 
+
+In functional languages on the other hand the problem is completely flipped.
+Here types and functions are completly distinct. To defina a new operation for a
+bunch of types you define a single function. In the body of that function you
+then use pattern matching to implement this operation for each type. But if you
+want a new type then you have to go into each function/operation and add a new
+pattarn to match against for this new type.
+
+## The Visitor pattern
+
