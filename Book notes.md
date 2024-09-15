@@ -14,11 +14,6 @@ of the notes will be more review style, but not all.
 - [Learning SQL](Learning SQL)
 - [System Design Interview](System Design Interview)
 
-## Books read in 2023
-- Data mesh
-- The definitive guide to kafka
-- Modern Software Engineering
-
 ## Books read since I started keeping trackin 2021
 List of books I have read
  - Show your work by Austin Kleon 2021-04-11

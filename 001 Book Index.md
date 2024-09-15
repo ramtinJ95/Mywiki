@@ -7,3 +7,4 @@ book related stuff.
 
 
 To find all notes for books go to [[Book notes.md]]
+List of books that I want to read [Books to read](Books to read)
