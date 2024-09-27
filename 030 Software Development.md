@@ -24,6 +24,10 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Study plan](Study plan)
 - [Notes](Notes)
 
+## Operating Systems
+- [Operating Systems Study plan](Operating Systems Study plan)
+- [Operating Systems Notes](Operating Systems Notes)
+
 ## Certification studies
 - [AWS](AWS)
 - GCP
