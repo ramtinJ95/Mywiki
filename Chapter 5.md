@@ -58,7 +58,7 @@ pattarn to match against for this new type.
 
 ## The Visitor pattern
 This pattern is about approximating the functional style within an OOP language.
-It lets us add new columns to that tabel easily. We can define all of the
+It lets us add new columns to that table easily. We can define all of the
 behaviour for a new operation on a set of types in one place, without having to
 touch the types themselves.
 
