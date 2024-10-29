@@ -105,3 +105,12 @@ This little snippet is how I built the clustering of vote pins:
                   t.is_correct
         SQL
 ```
+
+When you want to run docker container which you want to jump into but there are
+some entrypoint issues and you get an error like " No ID provided" or something
+along these lines then you can run this command:
+
+```bash
+docker run -it --rm --entrypoint /bin/sh <Image Name>
+```
+
