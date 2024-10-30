@@ -113,4 +113,13 @@ along these lines then you can run this command:
 ```bash
 docker run -it --rm --entrypoint /bin/sh <Image Name>
 ```
+When wanting to list all columns in a table seperated with a new line in google
+bigquery run the following query:
+
+```sql
+SELECT STRING_AGG(column_name, ',\n') AS column_list
+FROM `your_project.your_dataset.INFORMATION_SCHEMA.COLUMNS`
+WHERE table_name = 'your_table';
+```
+
 
