@@ -121,5 +121,26 @@ SELECT STRING_AGG(column_name, ',\n') AS column_list
 FROM `your_project.your_dataset.INFORMATION_SCHEMA.COLUMNS`
 WHERE table_name = 'your_table';
 ```
+When wanting to see if a combination of columns in a bigquery table is unique
+one can run the following query:
+```sql
+select applicationId, createdAtUTC, updatedAtUTC, clearingNumber, accountNumber,
+row_numbr, count(*) as nmbrs
+from 'your_table'
+group by applicationId, createdAtUTC, updatedAtUTC, clearingNumber, accountNumber, row_numbr
+having nmbrs > 1
+```
 
+In cases where the above query returns results, i.e there are duplicate rows
+given the columb combination and you want to create uniqueness you can run the
+following query to create a new dataset where uniqueness is enforced:
+```sql
+  select *, row_number() 
+  over 
+    (
+      partition by applicationId, createdAtUTC,
+      updatedAtUTC, clearingNumber, accountNumber order by updatedAt
+    ) as row_numbr
+  FROM 'your_table' 
+```
 
