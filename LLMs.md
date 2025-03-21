@@ -13,3 +13,10 @@ https://github.com/adammpkins/llama-terminal-completion
 ### Langchain
 Here I will possibly add notes about what I learn specific to LangChains. Such
 as the difference between chains and agents etc.
+
+## AI Engineering
+Currently reading the AI engineering book by chip.
+
+This blog post from martin fowler is a treasure trove of how to think about
+these AI systems when trying to use them for commercial situations:
+https://martinfowler.com/articles/gen-ai-patterns/#guardrails
