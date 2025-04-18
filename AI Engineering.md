@@ -123,10 +123,30 @@ For judging there is a new research directon of having small specialised judges
 such as Cappy, BLUERT and pandaLM
 
 #### Ranking Modles With Comparative Evaluation
+We have comparative evaluation and pointwise evaluation. Pointwise evaluation is
+to take each response from different models, score them, then in the end pick
+the one with the highest score. Comparative evaluation on the other hand is
+based on looking at all the responses from the different models at the same time
+and then picking the best one. This is grea for responses where user preference
+is the target. Note however that not all questions should be answered by
+preference, e.g facts questions etc.
 
+Comparative eal shouldn't be confused with A/B testing. In A/B testing a user
+sees the output of one of the models at a time, in comparative evaluation they
+see outputs form multiple models at the same time.
 
-   
-  
+For comparative evaluation each round of evaluation is caleed a match. The
+probability that model A is prefered over B is called the winrate of A over B.
+This is the perfect environment for a ranking algorithm, these are new in AI but
+been there for a long time in sports and games. Algorithms such as Elo,
+Bradley-Terry and TrueSkill to name a few. Through this lens we can see that
+model ranking is then a predicitve problem. We compute a rank from historical
+match outcomes and use it to predict future match outcomes.
+
+One important aspect of comparative evaluation that should not be forgotten is
+that comparative evaluation tells us which models is better. It does not tell us
+how good a model is or whether this model is good for our use case.
+
 
 ---
 status: :📖:
