@@ -13,6 +13,7 @@ of the notes will be more review style, but not all.
 - [Learning Spark](Learning Spark)
 - [Learning SQL](Learning SQL)
 - [System Design Interview](System Design Interview)
+- [AI Engineering](AI Engineering)
 
 ## Books read since I started keeping trackin 2021
 List of books I have read
