@@ -49,7 +49,7 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Data Engineering
 - Data Modeling
 - Analytical Patterns
-- Streaming Data
+- [Streaming Data](Streaming Data)
 - Data Lake / Lakehouse
 
 ## DevOps
