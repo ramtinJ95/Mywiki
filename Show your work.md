@@ -1,12 +1,11 @@
-
-### The Book In 3 Sentences It is not only the final product that is
+### The Book In 3 Sentences 
+It is not only the final product that is
 interesting, humans wants to connect and by sharing your process more people can
 connect with you. The struggle itself is intersting and a learning experience so
 you dont have to be a master to share your process. Stay truthful and share the
 truth about your journey and yourself. 
 
-## Summary and notes (this is for very good books that i really want to
-remember)
+## Summary and notes (this is for very good books that i really want to remember)
 - Be open with what you are working on. Because if you put it out in the open
   that you have committed to something then that becomes your accountability
   person(?)
@@ -103,7 +102,8 @@ remember)
 - You dont really find an audience for your work; they find you. But it's not
   enough to be good. In order to be found you have to be findable. 
 
-### Impressions The book is very well written and there was no fluff at all.
+### Impressions 
+The book is very well written and there was no fluff at all.
 This lack of fluff made it a very quick read. Even though it was a quick read i
 must say that the consequence of this book and the impact it has and will
 continue to have on my thinking and my life will be disportionatly large. Its
@@ -111,16 +111,19 @@ quite impressive how the author managed to cram so much knowledge and actionable
 advice in so little text, a standard that I and anyone who wants to write should
 aim for. 
 
-### How I Discovered It I came in contact with the book through a youtuber "Ali
+### How I Discovered It 
+I came in contact with the book through a youtuber "Ali
 abdaal" who is a medical doctor and a productivity youtuber.
 
-### Who Should Read It Anyone can read the book because I think there is
+### Who Should Read It 
+Anyone can read the book because I think there is
 something to learn here for everyone. But with that being said i think you would
 get the most out of the book if you have already been thinking about putting
 yourself out there like i had prior to reading the book. Because then many of
 tips and tricks that the book shares becomes actionable advice. 
 
-## How The Book Changed Me Before reading this book I was already thinking about
+## How The Book Changed Me 
+Before reading this book I was already thinking about
 sharing stuff on a blog. This book gave me the conviction to actually do this
 and at the same time it removed any hesitation i had about not having enough to
 share, or even having something worth sharing.

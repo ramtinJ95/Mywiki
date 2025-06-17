@@ -53,6 +53,7 @@ Here all the notes around topics and learnings around SWE will have their root
 - Data Lake / Lakehouse
 - KPI and Experimentation
 - Data Quality / Data Observability
+- [SQL Tips and Tricks](SQL Tips and Tricks)
 
 ## DevOps
 - [Ansible](Ansible)

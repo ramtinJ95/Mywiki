@@ -15,7 +15,7 @@ of the notes will be more review style, but not all.
 - [System Design Interview](System Design Interview)
 - [AI Engineering](AI Engineering)
 
-## Books read since I started keeping trackin 2021
+## Books read since I started keeping tracking 2021
 List of books I have read
  - Show your work by Austin Kleon 2021-04-11
  - The unfair advantage by Ash ali 2021-04-13
