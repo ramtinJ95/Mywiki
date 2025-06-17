@@ -51,12 +51,14 @@ Here all the notes around topics and learnings around SWE will have their root
 - Analytical Patterns
 - [Streaming Data](Streaming Data)
 - Data Lake / Lakehouse
+- KPI and Experimentation
+- Data Quality / Data Observability
 
 ## DevOps
 - [Ansible](Ansible)
 - [Chezmoi](Chezmoi)
 
-## My presentitions
+## My presentations
 - [Intro to dbt](Intro to dbt)
 
 ---
