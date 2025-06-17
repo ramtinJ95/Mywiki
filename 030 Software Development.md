@@ -46,6 +46,12 @@ Here all the notes around topics and learnings around SWE will have their root
 - [GDPR platform](GDPR platform)
 
 
+## Data Engineering
+- Data Modeling
+- Analytical Patterns
+- Streaming Data
+- Data Lake / Lakehouse
+
 ## DevOps
 - [Ansible](Ansible)
 - [Chezmoi](Chezmoi)
