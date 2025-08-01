@@ -8,3 +8,4 @@
 - [Header & Source file differences](Header & Source file differences)
 - [RAII](RAII)
 - [C++ Tooling](C++ Tooling)
+- [Function inlining](Function inlining)
