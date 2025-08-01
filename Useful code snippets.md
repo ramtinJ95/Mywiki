@@ -10,6 +10,10 @@ ls | xargs -I {} mv {} Unix_{}
 
 ## Vim motions/commands
 - "syy yanks the current line into a register called s that one can paste from by doing "sp, in this way its possible to paste from 1 register and not hav it be overwritten when doing deletes. Note that the lowercase naming of the register, in this case s, can be any letter as long as it does not interfere with the normal vim motions, for example a does not work since it will move you into insert mode. 
+- For search and replace in Vim use
+:%s/<search_phrase>/<replace_phrase>/options. Some common options are g, which
+is for global, i,e the entire file + c. The c is for confirmation at yeah change
+to make sure nothing crazy happens
 
 ## Git
 If one wants to clean up their local git repo that has a bunch of branches which
