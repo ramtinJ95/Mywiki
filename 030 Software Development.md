@@ -62,6 +62,8 @@ Here all the notes around topics and learnings around SWE will have their root
 ## My presentations
 - [Intro to dbt](Intro to dbt)
 
+## Development tooling setup
+- [eza (better ls)](eza (better ls))
 ---
 Status: :🗺️:
 tags: [[030 Software Development.Md]]
