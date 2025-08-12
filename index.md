@@ -20,7 +20,7 @@ In other words it will show me where some good jump of points could be within
 for example productivity in case i want to think more about some topic within
 productivity.
 
-Futhermore to build upon the reference system all references I will tag with
+Furthermore to build upon the reference system all references I will tag with
 #🏛  will also have a link to these index areas of focus if possible so that i
 can find everything i have read related to for example Machine learning etc. 
 
@@ -41,7 +41,8 @@ tags:
 	- :📖: Literature notes, these will be notes from books I read or notes
 	  while listening to video lectures such as huberman or the meaning
 	  crisis series. The idea is that i will process these into new ideas
-	  and eventually make them into evergreen notes. 
+	  and eventually make them into evergreen notes. Good articles are also
+    included in this category of content.
 	- :🏛: wiki notes/reference bibliography. Notes with this tag are just
 	  straight facts or general concepts like calculus that I will use as
 	  reference for my permanent/evergreen notes later on.

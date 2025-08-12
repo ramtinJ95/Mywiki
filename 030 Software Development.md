@@ -1,5 +1,7 @@
 Here all the notes around topics and learnings around SWE will have their root
 
+## Linux (Arch) notes
+
 ## AI/Machine Learning
 [Projects/Ideas](Projects/Ideas)
 [LLMs](LLMs)
@@ -24,6 +26,14 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Study plan](Study plan)
 - [Notes](Notes)
 
+## Graphics programming
+- [Software renderer](Software renderer)
+- GPU Architecture
+- GPU based graphics
+
+## Database development
+
+
 ## Operating Systems
 - [Operating Systems Study plan](Operating Systems Study plan)
 - [Operating Systems Notes](Operating Systems Notes)
@@ -45,7 +55,6 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Networking](Networking)
 - [GDPR platform](GDPR platform)
 
-
 ## Data Engineering
 - Data Modeling
 - Analytical Patterns
@@ -62,7 +71,7 @@ Here all the notes around topics and learnings around SWE will have their root
 ## My presentations
 - [Intro to dbt](Intro to dbt)
 
-## Development tooling setup
+## Development environment tooling setup
 - [eza (better ls)](eza (better ls))
 ---
 Status: :🗺️:
