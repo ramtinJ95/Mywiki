@@ -9,3 +9,7 @@
 - [RAII](RAII)
 - [C++ Tooling](C++ Tooling)
 - [Function inlining](Function inlining)
+
+
+## Project Templates
+- [Template for fast cmake and sdl2](Template for fast cmake and sdl2)
