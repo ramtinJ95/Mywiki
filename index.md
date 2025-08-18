@@ -1,6 +1,5 @@
 # Ramtins Knowledge Index
- 
-
+[todo](todo)
 ## Areas of Reference 000s - 
 	- [[000 Index]] 
 	- [[010 Productivity]] 
