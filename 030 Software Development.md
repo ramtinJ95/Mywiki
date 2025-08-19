@@ -58,11 +58,13 @@ Here all the notes around topics and learnings around SWE will have their root
 ## Data Engineering
 - Data Modeling
 - Analytical Patterns
+- [Data engineering patterns](Data engineering patterns)
 - [Streaming Data](Streaming Data)
 - Data Lake / Lakehouse
 - KPI and Experimentation
 - Data Quality / Data Observability
 - [SQL Tips and Tricks](SQL Tips and Tricks)
+- [Data Platform & Infrastructure  ](Data Platform & Infrastructure  )
 
 ## DevOps
 - [Ansible](Ansible)
@@ -73,6 +75,8 @@ Here all the notes around topics and learnings around SWE will have their root
 
 ## Development environment tooling setup
 - [eza (better ls)](eza (better ls))
+- [zioxide (better cd)](zioxide (better cd))
+- [yazi (file manager)](yazi (file manager))
 ---
 Status: :🗺️:
 tags: [[030 Software Development.Md]]
