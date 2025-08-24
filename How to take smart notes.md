@@ -1,7 +1,8 @@
 
 # How to take smart notes
 
-### The Book In 3 Sentences Writing and thinking should be synonyms if we want
+### The Book In 3 Sentences 
+Writing and thinking should be synonyms if we want
 to learn that which we are reading. This process of using writing as thinking
 can be efficiently attained by note taking using a system. That system is called
 slip-box and is the idea that we store notes we take while we read and link
@@ -104,7 +105,8 @@ ideas and concepts even tho they come from different sources.
   how writing,reading, memory and learning has been researched about. 
 
 
-### Impressions The book is actually quite convincing when it comes to the core
+### Impressions 
+The book is actually quite convincing when it comes to the core
 arguments. The author does a good job of providing papers and examples of why it
 is a good idea to read and write in the way that is proposed. I think that some
 parts of the book become to long winded or even repetitive. Although with that
@@ -123,14 +125,16 @@ repetition and insight to this method itself. I think the whole thing went a bit
 overboard and it almost made it seem like this system was magic or that it was
 the answer to everything. And personally im wary of such sensationalism always. 
 
-### How I Discovered It I had seen the book being mentioned before when i was
+### How I Discovered It 
+I had seen the book being mentioned before when i was
 learning about the zettelkasten method. And i decided that I should get serious
 about using this slip-box method (i.e zettelkasten) and after going through some
 tutorials on the web and reading some articles and forum posts about this system
 for thinking and linking ideas together it was time to take the plunge and give
 it a read.
 
-### Who Should Read It For everyone that is interested in learning how to read
+### Who Should Read It 
+For everyone that is interested in learning how to read
 better and take good notes really. I would recommend it for people who enjoy
 reading nonfiction and those that like writing because you cannot write without
 reading well. The system that is suggested i think is a bit more niche, for me
@@ -138,7 +142,8 @@ it is excellent and I will recommend the system to everyone but I have a hard
 time imagining the average person being ready to invest such effort just to
 organize their notes on a few books they read every year. 
 
-## How The Book Changed Me The book really put my strategies of learning into
+## How The Book Changed Me 
+The book really put my strategies of learning into
 perspective. I truly had no idea how inefficient and bad my strategies where.
 Also the idea of so actively reading with a pen in my hand and actually almost
 having an conversation with author while reading the book is so revolutionary

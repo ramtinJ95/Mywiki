@@ -6,14 +6,17 @@ of the notes will be more review style, but not all.
 - [Show your work](Show your work)
 
 ## Book Notes
-- [Data mesh](Data mesh)
-- [The definitive guide to kafka](The definitive guide to kafka)
-- [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
+
+#### Software Development
 - [The Staff Engineer's Path](The Staff Engineer's Path)
-- [Learning Spark](Learning Spark)
-- [Learning SQL](Learning SQL)
+- [The definitive guide to kafka](The definitive guide to kafka)
 - [System Design Interview](System Design Interview)
 - [AI Engineering](AI Engineering)
+#### Data Engineering
+- [Data mesh](Data mesh)
+- [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
+- [Learning Spark](Learning Spark)
+- [Learning SQL](Learning SQL)
 
 ## Books read since I started keeping tracking 2021
 List of books I have read
@@ -38,6 +41,8 @@ List of books I have read
  - Modern software engineering 2023-03-05
  - Data Pipelines Pocket Reference 2023-05-23
  - The Staff Engineers's Path 2023-07-15
+ - System Design Interview 2023-08-20
+ - AI Engineering 2025-04-18
 
 
 ---
