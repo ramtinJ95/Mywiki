@@ -2,11 +2,6 @@ Here all the notes around topics and learnings around SWE will have their root
 
 ## Linux (Arch) notes
 
-## AI/Machine Learning
-[Projects/Ideas](Projects/Ideas)
-[LLMs](LLMs)
-[ML From Scratch Implementations](ML From Scratch Implementations)
-
 ## C++
 [C++ Notes](C++ Notes)
 
