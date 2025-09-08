@@ -17,6 +17,7 @@ of the notes will be more review style, but not all.
 - [Data Pipelines Pocket Reference](Data Pipelines Pocket Reference)
 - [Learning Spark](Learning Spark)
 - [Learning SQL](Learning SQL)
+- [Data Modeling with Snowflake: A practical guide to accelerating Snowflake development using universal data modeling techniques](Data Modeling with Snowflake: A practical guide to accelerating Snowflake development using universal data modeling techniques)
 
 ## Books read since I started keeping tracking 2021
 List of books I have read
