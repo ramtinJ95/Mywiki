@@ -51,6 +51,7 @@ Here all the notes around topics and learnings around SWE will have their root
 - [GDPR platform](GDPR platform)
 
 ## Data Engineering
+- [Data Strategy](Data Strategy)
 - Data Modeling
 - Analytical Patterns
 - [Data engineering patterns](Data engineering patterns)
