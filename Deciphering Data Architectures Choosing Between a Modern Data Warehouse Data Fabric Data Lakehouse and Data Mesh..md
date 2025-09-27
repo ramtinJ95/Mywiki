@@ -4,7 +4,7 @@
 ![Modern Data warehouse overview](images/MDW-overview.png)
 
 ### Lakehouse overview
-insert pic here
+![A data lake overview](images/Data_lake-overview.png)
 
 - **Descriptive analytics** and diagnostic analytics are two important types of data analysis
 that are commonly used in business. Descriptive analytics involves analyzing data to
@@ -90,13 +90,13 @@ the MDW artchitecture is the best one for us. We can always migrate to a full
 lakehouse model later since much of the foundation is shared between the two
 architectures.
 
-- Figure 10.2 page 138 is great for MDW explanation
+- ![Modern Data warehouse detailed view](images/MDW-detailed.png)
  
 - page 140-141 pros and cons for MDW
 
 - chapter 11 quite weak
 
-- figure 12.1 page 160 is great
+- ![History of data warehouses](images/Data-storage-history.png)
 
 - Skills needed for building the data platform:
   - Data Architect
