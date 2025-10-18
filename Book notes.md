@@ -19,6 +19,7 @@ of the notes will be more review style, but not all.
 - [Learning SQL](Learning SQL)
 - [Data Modeling with Snowflake: A practical guide to accelerating Snowflake development using universal data modeling techniques](Data Modeling with Snowflake: A practical guide to accelerating Snowflake development using universal data modeling techniques)
 - [Deciphering Data Architectures Choosing Between a Modern Data Warehouse Data Fabric Data Lakehouse and Data Mesh.](Deciphering Data Architectures Choosing Between a Modern Data Warehouse Data Fabric Data Lakehouse and Data Mesh.)
+- [Principles of Building AI Agents 2nd edition](Principles of Building AI Agents 2nd edition)
 
 ## Books read since I started keeping tracking 2021
 List of books I have read
@@ -46,7 +47,7 @@ List of books I have read
  - System Design Interview 2023-08-20
  - AI Engineering 2025-04-18
  - Deciphering Data Architectures Choosing Between a Modern Data Warehouse Data Fabric Data Lakehouse and Data Mesh. 2025-09-27
-
+ - Principles of Building AI Agents 2nd edition 2025-10-18
 
 ---
 tags: #🏛 
