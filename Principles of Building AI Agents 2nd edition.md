@@ -6,11 +6,11 @@
   * What is the list of all tools that you will need?
   * what will each of them do?
 
-* Memory management is important. Working memory stores relevant persistent long
-term characteristics of users. Hierarchical memory is essentially about using
-recent messages along with relevant long-term memories. In practice this can look
-like the agent having access to the immediate context + using a tool to RAG
-longer memory relevant info based on user query.
+* Memory management is important. Working memory stores relevant persistent
+  long-term characteristics of users. Hierarchical memory is essentially about
+  using recent messages along with relevant long-term memories. In practice this
+  can look like the agent having access to the immediate context + using a tool
+  to RAG longer memory relevant info based on user query.
   * Tool call Filter is a tool to remove tool calls from memory sent to the llm.
     this usually improves performance.
 
