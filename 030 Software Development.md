@@ -28,6 +28,9 @@ Here all the notes around topics and learnings around SWE will have their root
 
 ## Database development
 
+## Computer Networking
+* [Computer Networking book notes](Computer Networking book notes)
+* Computer Networking Articles and notes
 
 ## Operating Systems
 - [Operating Systems Study plan](Operating Systems Study plan)
