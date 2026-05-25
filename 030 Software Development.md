@@ -42,6 +42,9 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Snowflake](Snowflake)
 - Azure
 
+## Kubernetes
+* [Kubernetes](Kubernetes)
+
 ## General Software development 
 - [Code patterns](Code patterns)
 - [Useful code snippets](Useful code snippets)
