@@ -28,9 +28,9 @@ Here all the notes around topics and learnings around SWE will have their root
 
 ## Database development
 
-## Computer Networking
+## Networking
 * [Computer Networking book notes](Computer Networking book notes)
-* Computer Networking Articles and notes
+* [Computer Networking Articles and notes](Computer Networking Articles and notes)
 
 ## Operating Systems
 - [Operating Systems Study plan](Operating Systems Study plan)
@@ -50,7 +50,6 @@ Here all the notes around topics and learnings around SWE will have their root
 - [Vim](Vim)
 - [Memory allocators](Memory allocators)
 - [Data Oriented Desging (DoD)](Data Oriented Desging (DoD))
-- [Networking](Networking)
 - [GDPR platform](GDPR platform)
 
 ## Data Engineering
