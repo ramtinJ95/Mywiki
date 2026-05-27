@@ -1,0 +1,1 @@
+- `030 Software Development.md:84` has `[[030 Software Development.Md]]` with a capitalized `.Md` extension. Standardize it to the existing `.md`/extensionless link style so the self-reference resolves consistently.

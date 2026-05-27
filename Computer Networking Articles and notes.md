@@ -1,9 +1,10 @@
 ## Concepts
-* DNSs
-* CDNs
+* DNS
+* CDN
 * SSL/TLS
-* Load Balancing
+* Load balancing
 * Network switch and router
-* Reverse proxy
+* [Proxy Server](Proxy Server)
+* [Reverse proxy](Reverse proxy)
 ## Articles
 
