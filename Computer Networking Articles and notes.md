@@ -2,7 +2,7 @@
 * DNS
 * CDN
 * SSL/TLS
-* Load balancing
+* [Load balancing](Load balancing)
 * Network switch and router
 * [Proxy Server](Proxy Server)
 * [Reverse proxy](Reverse proxy)
