@@ -1,5 +1,8 @@
 ## Proxy server
-A proxy server (sometimes called forward proxy) is a server that sits in front of a group of client machines. When those machines make requests to sites or service on the Internet the proxy intercepts those requests and communicates with the webservers on behalf of those clients.
+A proxy server (sometimes called forward proxy) is a server that sits in front 
+of a group of client machines. When those machines make requests to sites or service 
+on the Internet the proxy intercepts those requests and communicates with the 
+webservers on behalf of those clients.
 
 There are a few reasons why someone would add this middleman complexity of a
 forward proxy.
